@@ -1,6 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
+  const [isOpen, setisOpen] = useState(false);
+
+  const handleProfileButton = () => {
+    setisOpen(!isOpen);
+    console.log("here");
+    console.log(isOpen);
+  };
   return (
     <>
       <nav className="bg-gray-800">
@@ -76,34 +84,27 @@ const Header = () => {
               </div>
               <div className="hidden md:ml-6 md:flex md:items-center md:space-x-4">
                 {/* <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" --> */}
-                <a
-                  href="#"
+                <Link
+                  to="/"
                   className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
                   aria-current="page"
                 >
-                  Dashboard
-                </a>
+                  Sobre nosotros
+                </Link>
 
-                <a
-                  href="#"
+                <Link
+                  to="/"
                   className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                 >
-                  Team
-                </a>
+                  Encuentra un teacher
+                </Link>
 
-                <a
-                  href="#"
+                <Link
+                  to="/"
                   className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                 >
-                  Projects
-                </a>
-
-                <a
-                  href="#"
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                >
-                  Calendar
-                </a>
+                  Planes
+                </Link>
               </div>
             </div>
             <div className="flex items-center">
@@ -126,7 +127,7 @@ const Header = () => {
                       clip-rule="evenodd"
                     />
                   </svg>
-                  <span>New Job</span>
+                  <span>Crear curso</span>
                 </button>
               </div>
               <div className="hidden md:ml-4 md:flex-shrink-0 md:flex md:items-center">
@@ -134,7 +135,7 @@ const Header = () => {
                   type="button"
                   className="bg-gray-800 p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
                 >
-                  <span className="sr-only">View notifications</span>
+                  <span className="sr-only">Notificaciones</span>
                   {/* <!-- Heroicon name: outline/bell --> */}
                   <svg
                     className="h-6 w-6"
@@ -157,13 +158,13 @@ const Header = () => {
                 <div className="ml-3 relative">
                   <div>
                     <button
+                      onClick={() => handleProfileButton()}
                       type="button"
                       className="bg-gray-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
-                      id="user-menu-button"
-                      aria-expanded="false"
+                      aria-expanded={isOpen}
                       aria-haspopup="true"
                     >
-                      <span className="sr-only">Open user menu</span>
+                      <span className="sr-only">Abrir menu de usuario</span>
                       <img
                         className="h-8 w-8 rounded-full"
                         src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
@@ -190,35 +191,35 @@ const Header = () => {
                     tabindex="-1"
                   >
                     {/* <!-- Active: "bg-gray-100", Not Active: "" --> */}
-                    <a
-                      href="#"
+                    <Link
+                      to="/profile"
                       className="block px-4 py-2 text-sm text-gray-700"
                       role="menuitem"
                       tabindex="-1"
                       id="user-menu-item-0"
                     >
-                      Your Profile
-                    </a>
+                      Mi perfil
+                    </Link>
 
-                    <a
-                      href="#"
+                    <Link
+                      to="/"
                       className="block px-4 py-2 text-sm text-gray-700"
                       role="menuitem"
                       tabindex="-1"
                       id="user-menu-item-1"
                     >
-                      Settings
-                    </a>
+                      Mis cursos
+                    </Link>
 
-                    <a
-                      href="#"
+                    <Link
+                      to="#"
                       className="block px-4 py-2 text-sm text-gray-700"
                       role="menuitem"
                       tabindex="-1"
                       id="user-menu-item-2"
                     >
-                      Sign out
-                    </a>
+                      Cerrar sesión
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -230,34 +231,27 @@ const Header = () => {
         <div className="md:hidden" id="mobile-menu">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {/* <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" --> */}
-            <a
-              href="#"
+            <Link
+              to="#"
               className="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
               aria-current="page"
             >
-              Dashboard
-            </a>
+              Sobre Nosotros
+            </Link>
 
-            <a
-              href="#"
+            <Link
+              to="#"
               className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
             >
-              Team
-            </a>
+              Encuentra un teacher
+            </Link>
 
-            <a
-              href="#"
+            <Link
+              to="#"
               className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
             >
-              Projects
-            </a>
-
-            <a
-              href="#"
-              className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-            >
-              Calendar
-            </a>
+              Planes
+            </Link>
           </div>
           <div className="pt-4 pb-3 border-t border-gray-700">
             <div className="flex items-center px-5 sm:px-6">
@@ -278,7 +272,7 @@ const Header = () => {
                 type="button"
                 className="ml-auto flex-shrink-0 bg-gray-800 p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
               >
-                <span className="sr-only">View notifications</span>
+                <span className="sr-only">Notificaciones</span>
                 {/* <!-- Heroicon name: outline/bell --> */}
                 <svg
                   className="h-6 w-6"
@@ -298,26 +292,26 @@ const Header = () => {
               </button>
             </div>
             <div className="mt-3 px-2 space-y-1 sm:px-3">
-              <a
-                href="#"
+              <Link
+                to="#"
                 className="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700"
               >
-                Your Profile
-              </a>
+                Mi perfil
+              </Link>
 
-              <a
-                href="#"
+              <Link
+                to="#"
                 className="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700"
               >
-                Settings
-              </a>
+                Mis cursos
+              </Link>
 
-              <a
-                href="#"
+              <Link
+                to="#"
                 className="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700"
               >
-                Sign out
-              </a>
+                Cerrar sesión
+              </Link>
             </div>
           </div>
         </div>
