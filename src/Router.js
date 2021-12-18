@@ -12,7 +12,7 @@ const Router = () => {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
-            {/* Rutas de Usuario */}
+            {/* Rutas de Usuario*/}
             <Route path="signup" element={<Register />} />
             <Route path="login" element={<Login />} />
             <Route path="profile" element={<Profile />} />
