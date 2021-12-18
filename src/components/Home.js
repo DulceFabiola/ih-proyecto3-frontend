@@ -80,22 +80,18 @@ const Home = () => {
                     </div>
                     <div className="mt-6">
                       <h2 className="text-3xl font-extrabold tracking-tight text-gray-900">
-                        Stay on top of customer support
+                        Hablando se aprende a hablar
                       </h2>
                       <p className="mt-4 text-lg text-gray-500">
-                        Semper curabitur ullamcorper posuere nunc sed. Ornare
-                        iaculis bibendum malesuada faucibus lacinia porttitor.
-                        Pulvinar laoreet sagittis viverra duis. In venenatis sem
-                        arcu pretium pharetra at. Lectus viverra dui tellus
-                        ornare pharetra.
+                        Conoce tu nivel de inglés, reserva una asesoría.
                       </p>
                       <div className="mt-6">
-                        <a
-                          href="#"
+                        <Link
+                          to="#"
                           className="inline-flex bg-gradient-to-r from-purple-600 to-indigo-600 bg-origin-border px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:from-purple-700 hover:to-indigo-700"
                         >
-                          Get started
-                        </a>
+                          Resérvala hoy
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -103,9 +99,9 @@ const Home = () => {
                     <blockquote>
                       <div>
                         <p className="text-base text-gray-500">
-                          &ldquo;Cras velit quis eros eget rhoncus lacus
-                          ultrices sed diam. Sit orci risus aenean curabitur
-                          donec aliquet. Mi venenatis in euismod ut.&rdquo;
+                          &ldquo;Realmente disfruté mi estancia. Los Teachers
+                          han tomado en serio mis preguntas y mis problemas, y
+                          los ha respondido profesionalmente&rdquo;
                         </p>
                       </div>
                       <footer className="mt-3">
@@ -118,7 +114,7 @@ const Home = () => {
                             />
                           </div>
                           <div className="text-base font-medium text-gray-700">
-                            Marcia Hill, Digital Marketing Manager
+                            Katia Silva, Digital Marketing Manager
                           </div>
                         </div>
                       </footer>
@@ -129,7 +125,7 @@ const Home = () => {
                   <div className="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
                     <img
                       className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
-                      src="https://tailwindui.com/img/component-images/inbox-app-screenshot-1.jpg"
+                      src="https://i.blogs.es/757e54/google-meet/1366_2000.jpg"
                       alt="Inbox user interface"
                     />
                   </div>
@@ -162,22 +158,21 @@ const Home = () => {
                     </div>
                     <div className="mt-6">
                       <h2 className="text-3xl font-extrabold tracking-tight text-gray-900">
-                        Better understand your customers
+                        Expande tu mundo a través de los idiomas
                       </h2>
                       <p className="mt-4 text-lg text-gray-500">
-                        Semper curabitur ullamcorper posuere nunc sed. Ornare
-                        iaculis bibendum malesuada faucibus lacinia porttitor.
-                        Pulvinar laoreet sagittis viverra duis. In venenatis sem
-                        arcu pretium pharetra at. Lectus viverra dui tellus
-                        ornare pharetra.
+                        Puedes tomarlas de manera grupal o individual. Dentro de
+                        nuestra plataforma, también contarás con ejercicios
+                        prácticos creados para mejorar tu pronunciación,
+                        gramática y comprensión.
                       </p>
                       <div className="mt-6">
-                        <a
-                          href="#"
+                        <Link
+                          to="#"
                           className="inline-flex bg-gradient-to-r from-purple-600 to-indigo-600 bg-origin-border px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:from-purple-700 hover:to-indigo-700"
                         >
-                          Get started
-                        </a>
+                          Planes
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -186,7 +181,7 @@ const Home = () => {
                   <div className="pr-4 -ml-48 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
                     <img
                       className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
-                      src="https://tailwindui.com/img/component-images/inbox-app-screenshot-2.jpg"
+                      src="https://wwwhatsnew.com/wp-content/uploads/2020/12/Funciones-Google-Meet.jpg"
                       alt="Customer profile user interface"
                     />
                   </div>
@@ -199,7 +194,7 @@ const Home = () => {
           <div className="bg-gray-100">
             <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
               <p className="text-center text-sm font-semibold uppercase text-gray-500 tracking-wide">
-                Trusted by over 5 very average small businesses
+                Con la confianza de más de 5 pequeñas empresas
               </p>
               <div className="mt-6 grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-5">
                 <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
@@ -244,12 +239,10 @@ const Home = () => {
           <div className="bg-gradient-to-r from-purple-800 to-indigo-700">
             <div className="max-w-4xl mx-auto px-4 py-16 sm:px-6 sm:pt-20 sm:pb-24 lg:max-w-7xl lg:pt-24 lg:px-8">
               <h2 className="text-3xl font-extrabold text-white tracking-tight">
-                Inbox support built for efficiency
+                Por qué ....
               </h2>
               <p className="mt-4 max-w-3xl text-lg text-purple-200">
-                Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus.
-                Et magna sit morbi lobortis. Blandit aliquam sit nisl euismod
-                mattis in.
+                Poliworld
               </p>
               <div className="mt-12 grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2 lg:mt-16 lg:grid-cols-4 lg:gap-x-8 lg:gap-y-16">
                 <div>
@@ -275,11 +268,11 @@ const Home = () => {
                   </div>
                   <div className="mt-6">
                     <h3 className="text-lg font-medium text-white">
-                      Unlimited Inboxes
+                      Clases de conversación grupales
                     </h3>
                     <p className="mt-2 text-base text-purple-200">
-                      Ac tincidunt sapien vehicula erat auctor pellentesque
-                      rhoncus. Et magna sit morbi lobortis.
+                      Cada 30 minutos en grupos pequeños para ganar confianza en
+                      el momento de hablar inglés.
                     </p>
                   </div>
                 </div>
@@ -307,171 +300,11 @@ const Home = () => {
                   </div>
                   <div className="mt-6">
                     <h3 className="text-lg font-medium text-white">
-                      Manage Team Members
+                      Profesores expertos certificados
                     </h3>
                     <p className="mt-2 text-base text-purple-200">
-                      Ac tincidunt sapien vehicula erat auctor pellentesque
-                      rhoncus. Et magna sit morbi lobortis.
-                    </p>
-                  </div>
-                </div>
-
-                <div>
-                  <div>
-                    <span className="flex items-center justify-center h-12 w-12 rounded-md bg-white bg-opacity-10">
-                      {/* <!-- Heroicon name: outline/trash --> */}
-                      <svg
-                        className="h-6 w-6 text-white"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        aria-hidden="true"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
-                        />
-                      </svg>
-                    </span>
-                  </div>
-                  <div className="mt-6">
-                    <h3 className="text-lg font-medium text-white">
-                      Spam Report
-                    </h3>
-                    <p className="mt-2 text-base text-purple-200">
-                      Ac tincidunt sapien vehicula erat auctor pellentesque
-                      rhoncus. Et magna sit morbi lobortis.
-                    </p>
-                  </div>
-                </div>
-
-                <div>
-                  <div>
-                    <span className="flex items-center justify-center h-12 w-12 rounded-md bg-white bg-opacity-10">
-                      {/* <!-- Heroicon name: outline/pencil-alt --> */}
-                      <svg
-                        className="h-6 w-6 text-white"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        aria-hidden="true"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
-                        />
-                      </svg>
-                    </span>
-                  </div>
-                  <div className="mt-6">
-                    <h3 className="text-lg font-medium text-white">
-                      Compose in Markdown
-                    </h3>
-                    <p className="mt-2 text-base text-purple-200">
-                      Ac tincidunt sapien vehicula erat auctor pellentesque
-                      rhoncus. Et magna sit morbi lobortis.
-                    </p>
-                  </div>
-                </div>
-
-                <div>
-                  <div>
-                    <span className="flex items-center justify-center h-12 w-12 rounded-md bg-white bg-opacity-10">
-                      {/* <!-- Heroicon name: outline/document-report --> */}
-                      <svg
-                        className="h-6 w-6 text-white"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        aria-hidden="true"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                        />
-                      </svg>
-                    </span>
-                  </div>
-                  <div className="mt-6">
-                    <h3 className="text-lg font-medium text-white">
-                      Team Reporting
-                    </h3>
-                    <p className="mt-2 text-base text-purple-200">
-                      Ac tincidunt sapien vehicula erat auctor pellentesque
-                      rhoncus. Et magna sit morbi lobortis.
-                    </p>
-                  </div>
-                </div>
-
-                <div>
-                  <div>
-                    <span className="flex items-center justify-center h-12 w-12 rounded-md bg-white bg-opacity-10">
-                      {/* <!-- Heroicon name: outline/reply --> */}
-                      <svg
-                        className="h-6 w-6 text-white"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        aria-hidden="true"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M3 10h10a8 8 0 018 8v2M3 10l6 6m-6-6l6-6"
-                        />
-                      </svg>
-                    </span>
-                  </div>
-                  <div className="mt-6">
-                    <h3 className="text-lg font-medium text-white">
-                      Saved Replies
-                    </h3>
-                    <p className="mt-2 text-base text-purple-200">
-                      Ac tincidunt sapien vehicula erat auctor pellentesque
-                      rhoncus. Et magna sit morbi lobortis.
-                    </p>
-                  </div>
-                </div>
-
-                <div>
-                  <div>
-                    <span className="flex items-center justify-center h-12 w-12 rounded-md bg-white bg-opacity-10">
-                      {/* <!-- Heroicon name: outline/chat-alt --> */}
-                      <svg
-                        className="h-6 w-6 text-white"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        aria-hidden="true"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"
-                        />
-                      </svg>
-                    </span>
-                  </div>
-                  <div className="mt-6">
-                    <h3 className="text-lg font-medium text-white">
-                      Email Commenting
-                    </h3>
-                    <p className="mt-2 text-base text-purple-200">
-                      Ac tincidunt sapien vehicula erat auctor pellentesque
-                      rhoncus. Et magna sit morbi lobortis.
+                      Apoyo de profesores internacionales y bilingües para
+                      impulsar tu carrera.
                     </p>
                   </div>
                 </div>
@@ -499,11 +332,43 @@ const Home = () => {
                   </div>
                   <div className="mt-6">
                     <h3 className="text-lg font-medium text-white">
-                      Connect with Customers
+                      Clases particulares con temas útiles a tu manera
                     </h3>
                     <p className="mt-2 text-base text-purple-200">
-                      Ac tincidunt sapien vehicula erat auctor pellentesque
-                      rhoncus. Et magna sit morbi lobortis.
+                      Lecciones rápidas y actividades cortas para agilizar tu
+                      aprendizaje.
+                    </p>
+                  </div>
+                </div>
+
+                <div>
+                  <div>
+                    <span className="flex items-center justify-center h-12 w-12 rounded-md bg-white bg-opacity-10">
+                      {/* <!-- Heroicon name: outline/document-report --> */}
+                      <svg
+                        className="h-6 w-6 text-white"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        aria-hidden="true"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                  <div className="mt-6">
+                    <h3 className="text-lg font-medium text-white">
+                      Clases de conversación grupales
+                    </h3>
+                    <p className="mt-2 text-base text-purple-200">
+                      Cada 30 minutos en grupos pequeños para ganar confianza en
+                      el momento de hablar inglés.
                     </p>
                   </div>
                 </div>
@@ -532,63 +397,60 @@ const Home = () => {
               <div className="relative pt-12 pb-64 sm:pt-24 sm:pb-64 xl:col-start-1 xl:pb-24">
                 <h2 className="text-sm font-semibold tracking-wide uppercase">
                   <span className="bg-gradient-to-r from-purple-300 to-indigo-300 bg-clip-text text-transparent">
-                    Valuable Metrics
+                    Revisa cuál de nuestros planes se adapta mejor a tus
+                    necesidades
                   </span>
                 </h2>
-                <p className="mt-3 text-3xl font-extrabold text-white">
-                  Get actionable data that will help grow your business
-                </p>
-                <p className="mt-5 text-lg text-gray-300">
-                  Rhoncus sagittis risus arcu erat lectus bibendum. Ut in
-                  adipiscing quis in viverra tristique sem. Ornare feugiat
-                  viverra eleifend fusce orci in quis amet. Sit in et vitae
-                  tortor, massa. Dapibus laoreet amet lacus nibh integer quis.
-                  Eu vulputate diam sit tellus quis at.
-                </p>
+                <p className="mt-3 text-3xl font-extrabold text-white"></p>
+                <p className="mt-5 text-lg text-gray-300"></p>
                 <div className="mt-12 grid grid-cols-1 gap-y-12 gap-x-6 sm:grid-cols-2">
                   <p>
                     <span className="block text-2xl font-bold text-white">
-                      8K+
+                      Planes
                     </span>
                     <span className="mt-1 block text-base text-gray-300">
-                      <span className="font-medium text-white">Companies</span>{" "}
-                      use laoreet amet lacus nibh integer quis.
+                      <span className="font-medium text-white">
+                        Pensando en ti y tu conveniencia{" "}
+                      </span>{" "}
+                      el precio de nuestros cursos varía de acuerdo a la moneda
+                      de tu país
                     </span>
                   </p>
 
                   <p>
                     <span className="block text-2xl font-bold text-white">
-                      25K+
+                      Sólo debes registrarte
                     </span>
                     <span className="mt-1 block text-base text-gray-300">
                       <span className="font-medium text-white">
-                        Countries around the globe
+                        Y encontramos el mejor precio que se ajuste a lo que
+                        buscas
                       </span>{" "}
-                      lacus nibh integer quis.
+                      y agendar una cita
                     </span>
                   </p>
 
                   <p>
                     <span className="block text-2xl font-bold text-white">
-                      98%
+                      Alumnos
                     </span>
                     <span className="mt-1 block text-base text-gray-300">
                       <span className="font-medium text-white">
-                        Customer satisfaction
+                        Plataforma disponible 24/7
                       </span>{" "}
-                      laoreet amet lacus nibh integer quis.
+                      para que puedas estudiar a tu ritmo.
                     </span>
                   </p>
 
                   <p>
                     <span className="block text-2xl font-bold text-white">
-                      12M+
+                      Teachers
                     </span>
                     <span className="mt-1 block text-base text-gray-300">
                       <span className="font-medium text-white">
-                        Issues resolved
+                        Ingresa tu curso
                       </span>{" "}
-                      lacus nibh integer quis.
+                      y empieza con tus clases ,
                     </span>
                   </p>
                 </div>
@@ -600,24 +462,24 @@ const Home = () => {
           <div className="bg-white">
             <div className="max-w-4xl mx-auto py-16 px-4 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8 lg:flex lg:items-center lg:justify-between">
               <h2 className="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-                <span className="block">Ready to get started?</span>
+                <span className="block">¿Listo para iniciar?</span>
                 <span className="block bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
-                  Get in touch or create an account.
+                  Es momento de comenzar la aventura
                 </span>
               </h2>
               <div className="mt-6 space-y-4 sm:space-y-0 sm:flex sm:space-x-5">
-                <a
-                  href="#"
+                <Link
+                  to="#"
                   className="flex items-center justify-center bg-gradient-to-r from-purple-600 to-indigo-600 bg-origin-border px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:from-purple-700 hover:to-indigo-700"
                 >
-                  Learn more
-                </a>
-                <a
-                  href="#"
+                  Regístrate
+                </Link>
+                <Link
+                  to="#"
                   className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-indigo-800 bg-indigo-50 hover:bg-indigo-100"
                 >
-                  Get started
-                </a>
+                  Conoce mas sobre nuestros planes
+                </Link>
               </div>
             </div>
           </div>
