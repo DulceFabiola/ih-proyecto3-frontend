@@ -10,7 +10,7 @@ const Login = () => {
             <div>
               <img
                 className="h-12 w-auto"
-                src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+                src="./../.././../images/idiomas.png"
                 alt="Workflow"
               />
               <h2 className="mt-6 text-3xl font-extrabold text-gray-900">
@@ -86,7 +86,7 @@ const Login = () => {
         <div className="hidden lg:block relative w-0 flex-1">
           <img
             className="absolute inset-0 h-full w-full object-cover"
-            src="https://images.unsplash.com/photo-1505904267569-f02eaeb45a4c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1908&q=80"
+            src="https://ichef.bbci.co.uk/news/640/cpsprodpb/D43F/production/_103253345_gettyimages-864589956.jpg"
             alt=""
           />
         </div>

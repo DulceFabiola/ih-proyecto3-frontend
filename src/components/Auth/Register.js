@@ -2,14 +2,14 @@ import React from "react";
 
 const Register = () => {
   return (
-    <div>
-      <div className="min-h-full flex">
+    <div className=" w-auto justify-center items-center">
+      <div className="min-h-full  bg-white flex ">
         <div className="flex-1 flex flex-col justify-center py-12 px-4 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
           <div className="mx-auto w-full max-w-sm lg:w-96">
             <div>
               <img
                 className="h-12 w-auto"
-                src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+                src="./../.././../images/idiomas.png"
                 alt="Workflow"
               />
               <h2 className="mt-6 text-3xl font-extrabold text-gray-900">
@@ -37,10 +37,7 @@ const Register = () => {
                     </div>
                   </div>
                   <div className="space-y-1">
-                    <label
-                      for="password"
-                      className="block text-sm font-medium text-gray-700"
-                    >
+                    <label className="block text-sm font-medium text-gray-700">
                       Correo electrónico
                     </label>
                     <div className="mt-1">
@@ -106,7 +103,7 @@ const Register = () => {
         <div className="hidden lg:block relative w-0 flex-1">
           <img
             className="absolute inset-0 h-full w-full object-cover"
-            src="https://images.unsplash.com/photo-1505904267569-f02eaeb45a4c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1908&q=80"
+            src="https://ichef.bbci.co.uk/news/640/cpsprodpb/D43F/production/_103253345_gettyimages-864589956.jpg"
             alt=""
           />
         </div>
