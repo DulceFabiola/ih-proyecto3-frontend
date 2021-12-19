@@ -25,12 +25,16 @@ const UserState = (props) => {
   // 3. FUNCIONES
   const registerUser = async (form) => {
     const res = await axiosClient.post("users/signup", form);
-    console.log("here");
     const token = res.data.data;
     dispatch({
       type: "REGISTRO_EXITOSO",
       payload: token,
     });
+  };
+
+  const loginUser = async (form) => {
+    const res = await axiosClient.post("users/login", form);
+    console.log(res);
   };
   // 4. RETORNO
   return (
@@ -39,6 +43,7 @@ const UserState = (props) => {
         currentUser: globalState.currentUser,
         authStatus: globalState.authStatus,
         registerUser,
+        loginUser,
       }}
     >
       {props.children}
