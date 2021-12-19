@@ -119,28 +119,34 @@ const Header = () => {
             {currentUser.name ? (
               <>
                 <div className="flex items-center">
-                  <div className="flex-shrink-0">
-                    <button
-                      type="button"
-                      className="relative inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-500 hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-indigo-500"
-                    >
-                      {/* <!-- Heroicon name: solid/plus-sm --> */}
-                      <svg
-                        className="-ml-1 mr-2 h-5 w-5"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                        aria-hidden="true"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"
-                          clip-rule="evenodd"
-                        />
-                      </svg>
-                      <span>Crear curso</span>
-                    </button>
-                  </div>
+                  {currentUser.role === "Teacher" ? (
+                    <>
+                      <div className="flex-shrink-0">
+                        <button
+                          type="button"
+                          className="relative inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-500 hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-indigo-500"
+                        >
+                          {/* <!-- Heroicon name: solid/plus-sm --> */}
+                          <svg
+                            className="-ml-1 mr-2 h-5 w-5"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                            aria-hidden="true"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"
+                              clip-rule="evenodd"
+                            />
+                          </svg>
+                          <span>Crear curso</span>
+                        </button>
+                      </div>
+                    </>
+                  ) : (
+                    <></>
+                  )}
                   <div className="hidden md:ml-4 md:flex-shrink-0 md:flex md:items-center">
                     <button
                       type="button"
@@ -307,10 +313,10 @@ const Header = () => {
                   </div>
                   <div className="ml-3">
                     <div className="text-base font-medium text-white">
-                      Tom Cook
+                      {currentUser.name}
                     </div>
                     <div className="text-sm font-medium text-gray-400">
-                      tom@example.com
+                      {currentUser.email}
                     </div>
                   </div>
                   <button
