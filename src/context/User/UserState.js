@@ -34,8 +34,43 @@ const UserState = (props) => {
 
   const loginUser = async (form) => {
     const res = await axiosClient.post("users/login", form);
-    console.log(res);
+    const token = res.data.data;
+    dispatch({
+      type: "LOGIN_EXITOSO",
+      payload: token,
+    });
   };
+
+  const verifyingToken = async () => {
+    //sacar el dato del storage del navegador
+    const token = localStorage.getItem("token");
+    //si el token existe lo preparamos en axios para mandarlo
+    //a la sig. peticion de axios
+    if (token) {
+      axiosClient.defaults.headers.common["x-auth-token"] = token;
+    } else {
+      delete axiosClient.defaults.headers.common["x-auth-token"];
+    }
+    try {
+      const res = await axiosClient.get("users/verifytoken");
+      console.log(res);
+      const userData = res.data.data;
+
+      dispatch({
+        type: "GET_DATA_USER",
+        payload: userData,
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const logoutUser = async () => {
+    dispatch({
+      type: "LOGOUT_USUARIO",
+    });
+  };
+
   // 4. RETORNO
   return (
     <UserContext.Provider
@@ -44,6 +79,8 @@ const UserState = (props) => {
         authStatus: globalState.authStatus,
         registerUser,
         loginUser,
+        verifyingToken,
+        logoutUser,
       }}
     >
       {props.children}
