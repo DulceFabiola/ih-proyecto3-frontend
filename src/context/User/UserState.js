@@ -18,6 +18,7 @@ const UserState = (props) => {
       role: "",
     },
     authStatus: false,
+    msg: "",
   };
   // 2. CONFIGURACIÓN DEL REDUCER
   const [globalState, dispatch] = useReducer(UserReducer, initialState);
@@ -26,10 +27,18 @@ const UserState = (props) => {
   const registerUser = async (form) => {
     const res = await axiosClient.post("users/signup", form);
     const token = res.data.data;
-    dispatch({
-      type: "REGISTRO_EXITOSO",
-      payload: token,
-    });
+    const msg = res.data.msg;
+    if (msg) {
+      dispatch({
+        type: "REGISTER_ERROR",
+        payload: msg,
+      });
+    } else {
+      dispatch({
+        type: "REGISTRO_EXITOSO",
+        payload: token,
+      });
+    }
   };
 
   const loginUser = async (form) => {
@@ -41,7 +50,7 @@ const UserState = (props) => {
         payload: token,
       });
     } catch (error) {
-      // return null;
+      console.log(error);
     }
   };
 
@@ -74,16 +83,22 @@ const UserState = (props) => {
     });
   };
 
+  //EDITAR PERFIL
+  const updateProfile = async (form, idUser) => {
+    const res = await axiosClient.put(`users/editprofile/${idUser}`, form);
+  };
   // 4. RETORNO
   return (
     <UserContext.Provider
       value={{
         currentUser: globalState.currentUser,
         authStatus: globalState.authStatus,
+        msg: globalState.msg,
         registerUser,
         loginUser,
         verifyingToken,
         logoutUser,
+        updateProfile,
       }}
     >
       {props.children}

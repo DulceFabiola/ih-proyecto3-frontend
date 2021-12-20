@@ -9,6 +9,13 @@ const reducer = (globalState, action) => {
         authStatus: true,
       };
 
+    case "REGISTER_ERROR":
+      return {
+        ...globalState,
+        authStatus: false,
+        msg: action.payload,
+      };
+
     case "GET_DATA_USER":
       return {
         ...globalState,

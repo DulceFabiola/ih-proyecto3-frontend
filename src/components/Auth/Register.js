@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 
 const Register = () => {
   const ctx = useContext(UserContext);
-  const { registerUser } = ctx;
+  const { registerUser, msg } = ctx;
+  console.log(ctx);
   //ESTADO LOCAL cuando trabajamos con el formulario lo guardamos local
   const [newUser, setNewUser] = useState({
     name: "",
@@ -127,7 +128,7 @@ const Register = () => {
                   </div>
                   <div className="flex items-center justify-between">
                     <div className="text-sm font-medium text-red-500">
-                      Error
+                      {msg && <p>{msg}</p>}
                     </div>
                   </div>
                   <div>
