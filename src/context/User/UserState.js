@@ -33,12 +33,17 @@ const UserState = (props) => {
   };
 
   const loginUser = async (form) => {
-    const res = await axiosClient.post("users/login", form);
-    const token = res.data.data;
-    dispatch({
-      type: "LOGIN_EXITOSO",
-      payload: token,
-    });
+    try {
+      const res = await axiosClient.post("users/login", form);
+      const token = res.data.data;
+      dispatch({
+        type: "LOGIN_EXITOSO",
+        payload: token,
+      });
+      return res.data;
+    } catch (error) {
+      return null;
+    }
   };
 
   const verifyingToken = async () => {
