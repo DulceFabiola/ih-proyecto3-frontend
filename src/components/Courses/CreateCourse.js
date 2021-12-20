@@ -1,9 +1,49 @@
-import React from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
+import CourseContext from "../../context/Course/CourseContext";
 const CreateCourse = () => {
+  //1. ESTADO GLOBAL
+  const ctx = useContext(CourseContext);
+  const { createCourse } = ctx;
+
+  //2.ESTADO LOCAL
+  const [newCourse, setNewCourse] = useState({
+    level: "",
+    inscriptionDate: "",
+    startDate: "",
+    duration: "",
+    mode: "",
+    schedule: "",
+    days: "",
+    subject: "",
+    link: "",
+    owner: "",
+  });
+
+  //3.FUNCIONES
+  const handleChange = (e) => {
+    e.preventDefault();
+    //establcer el cambio en el estado local
+    setNewCourse({
+      ...newCourse,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    //subir datos del estado local al estado global
+    e.preventDefault();
+    createCourse(newCourse);
+  };
+
   return (
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10">
-      <form class="space-y-8 divide-y divide-gray-200">
+      <form
+        onSubmit={(event) => {
+          handleSubmit(event);
+        }}
+        class="space-y-8 divide-y divide-gray-200"
+      >
         <div class="space-y-8 divide-y divide-gray-200 sm:space-y-5">
           <div>
             <div>
@@ -22,6 +62,9 @@ const CreateCourse = () => {
                 </label>
                 <div class="mt-1 sm:mt-0 sm:col-span-2">
                   <input
+                    onChange={(event) => {
+                      handleChange(event);
+                    }}
                     type="text"
                     name="level"
                     required
@@ -39,6 +82,9 @@ const CreateCourse = () => {
                 </label>
                 <div class="mt-1 sm:mt-0 sm:col-span-2">
                   <input
+                    onChange={(event) => {
+                      handleChange(event);
+                    }}
                     type="text"
                     name="inscriptionDate"
                     required
@@ -56,6 +102,9 @@ const CreateCourse = () => {
                 </label>
                 <div class="mt-1 sm:mt-0 sm:col-span-2">
                   <input
+                    onChange={(event) => {
+                      handleChange(event);
+                    }}
                     name="startDate"
                     type="text"
                     required
@@ -72,6 +121,9 @@ const CreateCourse = () => {
                 </label>
                 <div class="mt-1 sm:mt-0 sm:col-span-2">
                   <input
+                    onChange={(event) => {
+                      handleChange(event);
+                    }}
                     name="duration"
                     type="text"
                     required
@@ -86,6 +138,9 @@ const CreateCourse = () => {
                 </label>
                 <div class="mt-1 sm:mt-0 sm:col-span-2">
                   <select
+                    onChange={(event) => {
+                      handleChange(event);
+                    }}
                     name="mode"
                     required
                     class="max-w-lg block focus:ring-indigo-500 focus:border-indigo-500 w-full shadow-sm sm:max-w-xs sm:text-sm border-gray-300 rounded-md"
@@ -106,6 +161,9 @@ const CreateCourse = () => {
                 </label>
                 <div class="mt-1 sm:mt-0 sm:col-span-2">
                   <input
+                    onChange={(event) => {
+                      handleChange(event);
+                    }}
                     type="text"
                     name="schedule"
                     required
@@ -123,6 +181,9 @@ const CreateCourse = () => {
                 </label>
                 <div class="mt-1 sm:mt-0 sm:col-span-2">
                   <input
+                    onChange={(event) => {
+                      handleChange(event);
+                    }}
                     type="text"
                     name="days"
                     required
@@ -151,6 +212,9 @@ const CreateCourse = () => {
                 <div class="mt-1 sm:mt-0 sm:col-span-2">
                   <div class="max-w-lg flex rounded-md shadow-sm">
                     <input
+                      onChange={(event) => {
+                        handleChange(event);
+                      }}
                       type="text"
                       name="link"
                       class="flex-1 block w-full focus:ring-indigo-500 focus:border-indigo-500 min-w-0 rounded-none rounded-r-md sm:text-sm border-gray-300"
@@ -168,6 +232,9 @@ const CreateCourse = () => {
                 </label>
                 <div class="mt-1 sm:mt-0 sm:col-span-2">
                   <textarea
+                    onChange={(event) => {
+                      handleChange(event);
+                    }}
                     name="subject"
                     rows="3"
                     required

@@ -40,9 +40,8 @@ const UserState = (props) => {
         type: "LOGIN_EXITOSO",
         payload: token,
       });
-      return res.data;
     } catch (error) {
-      return null;
+      // return null;
     }
   };
 
@@ -58,7 +57,6 @@ const UserState = (props) => {
     }
     try {
       const res = await axiosClient.get("users/verifytoken");
-      console.log(res);
       const userData = res.data.data;
 
       dispatch({
