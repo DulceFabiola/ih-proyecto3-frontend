@@ -40,9 +40,8 @@ const UserState = (props) => {
         type: "LOGIN_EXITOSO",
         payload: token,
       });
-      return res.data;
     } catch (error) {
-      return null;
+      // return null;
     }
   };
 

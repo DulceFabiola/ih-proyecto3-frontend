@@ -58,6 +58,23 @@ const CourseState = (props) => {
       payload: selectedCourse,
     });
   };
+
+  //CREAR CURSO
+  const createCourse = async (form) => {
+    const res = await axiosClient.post("courses/create", form);
+    console.log(res);
+  };
+
+  //EDITAR CURSO
+  const updateCourse = async (form, idCourse) => {
+    const res = await axiosClient.put(`courses/edit/${idCourse}`, form);
+  };
+
+  //ELIMINAR CURSO
+  const deleteCourse = async (idCourse) => {
+    const res = await axiosClient.delete(`courses/delete/${idCourse}`);
+  };
+
   //4.RETORNO
   return (
     <CourseContext.Provider
@@ -66,6 +83,9 @@ const CourseState = (props) => {
         singleCourse: globalState.singleCourse,
         getCourses,
         getCourse,
+        createCourse,
+        updateCourse,
+        deleteCourse,
       }}
     >
       {props.children}
