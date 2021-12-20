@@ -4,9 +4,7 @@ import UserContext from "../../context/User/UserContext";
 
 const Profile = () => {
   const ctx = useContext(UserContext);
-
   const { currentUser } = ctx;
-  console.log(currentUser);
   return (
     <>
       <div class="min-h-full">
@@ -92,7 +90,6 @@ const Profile = () => {
                           Dirección electrónica
                         </dt>
                         <dd class="mt-1 text-sm text-gray-900">
-                          {" "}
                           {currentUser.email}
                         </dd>
                       </div>
