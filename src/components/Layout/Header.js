@@ -239,6 +239,7 @@ const Header = () => {
                         className={`origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none ${
                           isOpen ? "block" : "hidden"
                         } `}
+                        style={{ zIndex: "1" }}
                         role="menu"
                         aria-orientation="vertical"
                         aria-labelledby="user-menu-button"
