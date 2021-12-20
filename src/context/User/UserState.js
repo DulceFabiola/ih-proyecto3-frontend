@@ -58,7 +58,6 @@ const UserState = (props) => {
     }
     try {
       const res = await axiosClient.get("users/verifytoken");
-      console.log(res);
       const userData = res.data.data;
 
       dispatch({
