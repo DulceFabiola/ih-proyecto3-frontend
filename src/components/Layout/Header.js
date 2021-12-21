@@ -101,6 +101,12 @@ const Header = () => {
                   >
                     Cursos disponibles
                   </Link>
+                  <Link
+                    to="/ourteachers"
+                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                  >
+                    Encuentra un teacher
+                  </Link>
 
                   <Link
                     to="/"
@@ -305,7 +311,7 @@ const Header = () => {
             </Link>
 
             <Link
-              to="#"
+              to="/ourteachers"
               className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
             >
               Encuentra un teacher

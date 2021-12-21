@@ -14,6 +14,7 @@ import CourseState from "./context/Course/CourseState";
 import EditProfile from "./components/User/EditProfile";
 import Auth from "./routes/Auth";
 import Private from "./routes/Private";
+import OurTeachers from "./components/Teachers.js/OurTeachers";
 const Router = () => {
   return (
     <>
@@ -36,6 +37,8 @@ const Router = () => {
                 <Route path="courses/create" element={<CreateCourses />} />
                 <Route path="courses/:id" element={<SingleCourse />} />
                 <Route path="courses/:id/edit" element={<EditCourse />} />
+                {/* Rutas de Nuestros profesores */}
+                <Route path="ourteachers" element={<OurTeachers />} />
               </Route>
             </Routes>
           </BrowserRouter>
