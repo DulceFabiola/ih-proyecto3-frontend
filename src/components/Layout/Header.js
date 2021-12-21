@@ -82,12 +82,12 @@ const Header = () => {
                 <Link to="/">
                   <img
                     className="block lg:hidden h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
+                    src="https://cdn-icons-png.flaticon.com/512/139/139706.png"
                     alt="Workflow"
                   />
                   <img
                     className="hidden lg:block h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/workflow-logo-indigo-500-mark-white-text.svg"
+                    src="https://cdn-icons-png.flaticon.com/512/139/139706.png"
                     alt="Workflow"
                   />
                 </Link>
@@ -205,7 +205,7 @@ const Header = () => {
                           <span className="sr-only">Abrir menu de usuario</span>
                           {currentUser.image ? (
                             <img
-                              class="h-16 w-16 rounded-full"
+                              class="h-10 w-10 rounded-full"
                               src={currentUser.image}
                               alt=""
                             />

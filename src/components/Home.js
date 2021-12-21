@@ -20,8 +20,8 @@ const Home = () => {
                   <div className="absolute inset-0">
                     <img
                       className="h-full w-full object-cover"
-                      src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2830&q=80&sat=-100"
-                      alt="People working on laptops"
+                      src="https://www.landuum.com/wp-content/uploads/2018/11/INTRO-e1543433023899.jpg"
+                      alt="People"
                     />
                     <div className="absolute inset-0 bg-gradient-to-r from-purple-800 to-indigo-700 mix-blend-multiply"></div>
                   </div>
@@ -125,7 +125,7 @@ const Home = () => {
                   <div className="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
                     <img
                       className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
-                      src="https://i.blogs.es/757e54/google-meet/1366_2000.jpg"
+                      src="https://planesyplanos.com/wp-content/uploads/2019/09/ARTISTICO3.jpg"
                       alt="Inbox user interface"
                     />
                   </div>
@@ -181,7 +181,7 @@ const Home = () => {
                   <div className="pr-4 -ml-48 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
                     <img
                       className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
-                      src="https://wwwhatsnew.com/wp-content/uploads/2020/12/Funciones-Google-Meet.jpg"
+                      src="https://images.adsttc.com/media/images/5b1e/6e19/f197/ccc5/c800/007f/large_jpg/Alex_Sahores_Santiago_(6).jpg?1528720917"
                       alt="Customer profile user interface"
                     />
                   </div>
@@ -242,7 +242,7 @@ const Home = () => {
                 Por qué ....
               </h2>
               <p className="mt-4 max-w-3xl text-lg text-purple-200">
-                Poliworld
+                My lerning space
               </p>
               <div className="mt-12 grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2 lg:mt-16 lg:grid-cols-4 lg:gap-x-8 lg:gap-y-16">
                 <div>
@@ -383,7 +383,7 @@ const Home = () => {
                 <div className="h-full xl:relative xl:col-start-2">
                   <img
                     className="h-full w-full object-cover opacity-25 xl:absolute xl:inset-0"
-                    src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2830&q=80&sat=-100"
+                    src="https://i.pinimg.com/736x/e8/42/a8/e842a8e2f5ee6b108352275963f91d46.jpg"
                     alt="People working on laptops"
                   />
                   <div
