@@ -1,14 +1,16 @@
 import React, { useContext, useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import UserContext from "../../context/User/UserContext";
 
 const EditProfile = () => {
   // 1. ESTADO GLOBAL
+  let navigate = useNavigate();
   const params = useParams();
   const idUser = params.id;
   const ctx = useContext(UserContext);
   const { currentUser, updateProfile } = ctx;
+
   // 2. ESTADO LOCAL
   const [userData, setUserData] = useState({
     name: "",
@@ -48,6 +50,7 @@ const EditProfile = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     updateProfile(userData, idUser);
+    navigate("/profile");
   };
 
   return (
@@ -136,6 +139,7 @@ const EditProfile = () => {
                                   }}
                                   type="text"
                                   name="name"
+                                  value={userData.name}
                                   required
                                   className="max-w-lg block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:max-w-xs sm:text-sm border-gray-300 rounded-md"
                                 />
@@ -156,6 +160,7 @@ const EditProfile = () => {
                                   }}
                                   type="text"
                                   name="lastname"
+                                  value={userData.lastname}
                                   required
                                   className="max-w-lg block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:max-w-xs sm:text-sm border-gray-300 rounded-md"
                                 />
@@ -176,6 +181,7 @@ const EditProfile = () => {
                                   }}
                                   name="country"
                                   type="text"
+                                  value={userData.country}
                                   required
                                   className="block max-w-lg w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border-gray-300 rounded-md"
                                 />
@@ -196,6 +202,7 @@ const EditProfile = () => {
                                   }}
                                   type="text"
                                   name="image"
+                                  value={userData.image}
                                   required
                                   className="block max-w-lg w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border-gray-300 rounded-md"
                                 />
@@ -216,6 +223,7 @@ const EditProfile = () => {
                                   }}
                                   type="text"
                                   name="experience"
+                                  value={userData.experience}
                                   required
                                   className="max-w-lg block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:max-w-xs sm:text-sm border-gray-300 rounded-md"
                                 />
@@ -236,6 +244,7 @@ const EditProfile = () => {
                                   name="description"
                                   type="text"
                                   rows="3"
+                                  value={userData.description}
                                   required
                                   className="block max-w-lg w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border-gray-300 rounded-md"
                                 />
@@ -247,12 +256,12 @@ const EditProfile = () => {
 
                       <div className="pt-5">
                         <div className="flex justify-end">
-                          <Link to="/courses">
+                          <Link to="/profile">
                             <button
                               type="button"
                               className="bg-white py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                             >
-                              Cancelar
+                              Mi perfil
                             </button>
                           </Link>
                           <button
