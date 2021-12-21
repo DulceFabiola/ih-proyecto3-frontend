@@ -1,7 +1,8 @@
 import React, { useState, useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import CourseContext from "../../context/Course/CourseContext";
 const CreateCourse = () => {
+  const navigate = useNavigate();
   //1. ESTADO GLOBAL
   const ctx = useContext(CourseContext);
   const { createCourse } = ctx;
@@ -34,6 +35,7 @@ const CreateCourse = () => {
     //subir datos del estado local al estado global
     e.preventDefault();
     createCourse(newCourse);
+    navigate("/courses");
   };
 
   return (

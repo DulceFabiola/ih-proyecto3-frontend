@@ -1,10 +1,11 @@
 import React, { useState, useContext, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import CourseContext from "../../context/Course/CourseContext";
 
 const EditCourse = () => {
   // 1. ESTADO GLOBAL
+  const navigate = useNavigate();
   const params = useParams();
   const idCourse = params.id;
   const ctx = useContext(CourseContext);
@@ -72,6 +73,7 @@ const EditCourse = () => {
     e.preventDefault();
 
     updateCourse(courseData, idCourse);
+    navigate("/courses");
   };
 
   // 4. RETURN
