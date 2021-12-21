@@ -1,10 +1,10 @@
 import React, { useContext, useEffect } from "react";
-import GuitarContext from "./../../../context/Course/CourseContext";
+import CourseContext from "./../../../context/Course/CourseContext";
 import UserContext from "../../../context/User/UserContext";
 import { Link, useParams } from "react-router-dom";
 
 const SingleCourse = () => {
-  const ctx = useContext(GuitarContext);
+  const ctx = useContext(CourseContext);
   const userCtx = useContext(UserContext);
   const { getCourse, singleCourse, deleteCourse } = ctx;
   const { currentUser } = userCtx;
