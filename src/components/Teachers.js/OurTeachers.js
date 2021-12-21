@@ -11,7 +11,7 @@ const OurTeachers = () => {
   return (
     <div className="bg-white">
       <div className="max-w-7xl mx-auto py-12 px-4 text-center sm:px-6 lg:px-8 lg:py-24">
-        <div className="space-y-8 sm:space-y-12">
+        <div className="space-y-12">
           <div className="space-y-5 sm:mx-auto sm:max-w-xl sm:space-y-4 lg:max-w-5xl">
             <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">
               Nuestros Teachers
@@ -20,21 +20,21 @@ const OurTeachers = () => {
               Profesores expertos certificados
             </p>
           </div>
-          <ul className="mx-auto grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-12 xl:grid-cols-6">
+          <ul className="mx-auto space-y-16 sm:grid sm:grid-cols-2 sm:gap-16 sm:space-y-0 lg:grid-cols-3 lg:max-w-5xl">
             {teachers.map((element) => {
               if (element.role === "Teacher") {
                 return (
                   <Link to={`/teachers/${element._id}`}>
                     <li>
-                      <div className="space-y-4">
+                      <div className="space-y-6">
                         {element.image ? (
                           <img
-                            className="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24"
+                            className="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56"
                             src={element.image}
                             alt=""
                           />
                         ) : (
-                          <span className="inline-block mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24 rounded-full overflow-hidden bg-gray-100">
+                          <span className="inline-block mx-auto mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56 lg:w-24 lg:h-24 rounded-full overflow-hidden bg-gray-100">
                             <svg
                               className="h-full w-full text-gray-300"
                               fill="currentColor"
@@ -45,12 +45,10 @@ const OurTeachers = () => {
                           </span>
                         )}
                         <div className="space-y-2">
-                          <div className="text-xs font-medium lg:text-sm">
-                            <h2>{element.name}</h2>
-                            <p>
-                              Contacto:
-                              {element.email && <h2> {element.email}</h2>}
-                            </p>
+                          <div className="text-lg leading-6 font-medium space-y-1">
+                            <h3>Teacher: {element.name}</h3>
+                            <p className="text-indigo-600">Contacto:</p>
+                            <h3>{element.email}</h3>
                           </div>
                         </div>
                       </div>
