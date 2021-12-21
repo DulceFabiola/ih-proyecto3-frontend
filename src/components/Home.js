@@ -7,43 +7,43 @@ const Home = () => {
       <div className="bg-white">
         <main>
           {/* <!-- Alternating Feature Sections --> */}
-          <div className="relative pt-16 pb-32 overflow-hidden">
+          <div className="relative pb-32 overflow-hidden">
             <div
               aria-hidden="true"
               className="absolute inset-x-0 top-0 h-48 bg-gradient-to-b from-gray-100"
             ></div>
             {/* <!-- Hero section --> */}
             <div className="relative">
-              <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gray-100"></div>
+              <div className="absolute inset-x-0 bottom-0 h-1/2"></div>
               <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
-                <div className="relative shadow-xl sm:rounded-2xl sm:overflow-hidden">
+                <div className="relative shadow-xl  sm:overflow-hidden">
                   <div className="absolute inset-0">
                     <img
                       className="h-full w-full object-cover"
                       src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2830&q=80&sat=-100"
                       alt="People working on laptops"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-r from-purple-800 to-indigo-700 mix-blend-multiply"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-platzo-600 to-platzo-1000 mix-blend-multiply"></div>
                   </div>
                   <div className="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8">
                     <h1 className="text-center text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
                       <span className="block text-white">¿Cómo aprender</span>
-                      <span className="block text-indigo-200">idiomas?</span>
+                      <span className="block text-platzo-800">idiomas?</span>
                     </h1>
-                    <p className="mt-6 max-w-lg mx-auto text-center text-xl text-indigo-200 sm:max-w-3xl">
+                    <p className="mt-6 max-w-lg mx-auto text-center text-xl text-platzo-800 sm:max-w-3xl">
                       Donde quieras. Cuando quieras.
                     </p>
                     <div className="mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center">
                       <div className="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5">
                         <Link
                           to="/signup"
-                          className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-indigo-700 bg-white hover:bg-indigo-50 sm:px-8"
+                          className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-platzo-900 bg-white hover:bg-indigo-50 sm:px-8"
                         >
                           ¡Regístrate!
                         </Link>
                         <Link
                           to="/login"
-                          className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-500 bg-opacity-60 hover:bg-opacity-70 sm:px-8"
+                          className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-platzo-800 bg-platzo-1000 bg-opacity-60 hover:bg-opacity-70 sm:px-8"
                         >
                           Inicia sesión
                         </Link>
@@ -54,28 +54,13 @@ const Home = () => {
               </div>
             </div>
 
-            <div className="relative">
+            <div className="relative bg-white">
               <div className="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24">
                 <div className="px-4 max-w-xl mx-auto sm:px-6 lg:py-16 lg:max-w-none lg:mx-0 lg:px-0">
                   <div>
                     <div>
-                      <span className="h-12 w-12 rounded-md flex items-center justify-center bg-gradient-to-r from-purple-600 to-indigo-600">
-                        {/* <!-- Heroicon name: outline/inbox --> */}
-                        <svg
-                          className="h-6 w-6 text-white"
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                          aria-hidden="true"
-                        >
-                          <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4"
-                          />
-                        </svg>
+                      <span className="h-20 w-20 rounded-md flex items-center justify-center">
+                        <img src="./../../images/iconoE.png" alt="" />
                       </span>
                     </div>
                     <div className="mt-6">
@@ -88,7 +73,7 @@ const Home = () => {
                       <div className="mt-6">
                         <Link
                           to="#"
-                          className="inline-flex bg-gradient-to-r from-purple-600 to-indigo-600 bg-origin-border px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:from-purple-700 hover:to-indigo-700"
+                          className="inline-flex bg-platzo-1000 bg-origin-border px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:from-purple-700 hover:to-indigo-700"
                         >
                           Resérvala hoy
                         </Link>
@@ -132,28 +117,13 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <div className="mt-24">
+            <div className="mt-24 bg-platzo-500">
               <div className="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24">
                 <div className="px-4 max-w-xl mx-auto sm:px-6 lg:py-32 lg:max-w-none lg:mx-0 lg:px-0 lg:col-start-2">
                   <div>
                     <div>
-                      <span className="h-12 w-12 rounded-md flex items-center justify-center bg-gradient-to-r from-purple-600 to-indigo-600">
-                        {/* <!-- Heroicon name: outline/sparkles --> */}
-                        <svg
-                          className="h-6 w-6 text-white"
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                          aria-hidden="true"
-                        >
-                          <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
-                          />
-                        </svg>
+                      <span className="h-20 w-20 rounded-md flex items-center justify-center">
+                        <img src="./../../images/iconoE.png" alt="" />
                       </span>
                     </div>
                     <div className="mt-6">
@@ -169,7 +139,7 @@ const Home = () => {
                       <div className="mt-6">
                         <Link
                           to="#"
-                          className="inline-flex bg-gradient-to-r from-purple-600 to-indigo-600 bg-origin-border px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:from-purple-700 hover:to-indigo-700"
+                          className="inline-flex bg-platzo-1000 bg-origin-border px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:from-purple-700 hover:to-indigo-700"
                         >
                           Planes
                         </Link>
@@ -236,7 +206,7 @@ const Home = () => {
             </div>
           </div>
           {/* <!-- Gradient Feature Section --> */}
-          <div className="bg-gradient-to-r from-purple-800 to-indigo-700">
+          <div className="bg-gradient-to-r from-platzo-600 to-platzo-1000">
             <div className="max-w-4xl mx-auto px-4 py-16 sm:px-6 sm:pt-20 sm:pb-24 lg:max-w-7xl lg:pt-24 lg:px-8">
               <h2 className="text-3xl font-extrabold text-white tracking-tight">
                 Por qué ....
@@ -411,7 +381,7 @@ const Home = () => {
                     <span className="mt-1 block text-base text-gray-300">
                       <span className="font-medium text-white">
                         Pensando en ti y tu conveniencia{" "}
-                      </span>{" "}
+                      </span>
                       el precio de nuestros cursos varía de acuerdo a la moneda
                       de tu país
                     </span>
@@ -437,7 +407,7 @@ const Home = () => {
                     <span className="mt-1 block text-base text-gray-300">
                       <span className="font-medium text-white">
                         Plataforma disponible 24/7
-                      </span>{" "}
+                      </span>
                       para que puedas estudiar a tu ritmo.
                     </span>
                   </p>
@@ -449,7 +419,7 @@ const Home = () => {
                     <span className="mt-1 block text-base text-gray-300">
                       <span className="font-medium text-white">
                         Ingresa tu curso
-                      </span>{" "}
+                      </span>
                       y empieza con tus clases ,
                     </span>
                   </p>
@@ -463,20 +433,20 @@ const Home = () => {
             <div className="max-w-4xl mx-auto py-16 px-4 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8 lg:flex lg:items-center lg:justify-between">
               <h2 className="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
                 <span className="block">¿Listo para iniciar?</span>
-                <span className="block bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
+                <span className="block text-platzo-1000 bg-clip-text text-transparent">
                   Es momento de comenzar la aventura
                 </span>
               </h2>
               <div className="mt-6 space-y-4 sm:space-y-0 sm:flex sm:space-x-5">
                 <Link
                   to="/signup"
-                  className="flex items-center justify-center bg-gradient-to-r from-purple-600 to-indigo-600 bg-origin-border px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:from-purple-700 hover:to-indigo-700"
+                  className="flex items-center justify-center bg-platzo-400 bg-origin-border px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:from-purple-700 hover:to-indigo-700"
                 >
                   Regístrate
                 </Link>
                 <Link
                   to="#"
-                  className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-indigo-800 bg-indigo-50 hover:bg-indigo-100"
+                  className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-platzo-400 bg-indigo-50 hover:bg-indigo-100"
                 >
                   Conoce mas sobre nuestros planes
                 </Link>

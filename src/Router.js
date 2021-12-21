@@ -24,6 +24,8 @@ const Router = () => {
               <Route path="/" element={<Layout />}>
                 <Route index element={<Auth component={Home} />} />
                 {/* Rutas de Usuario*/}
+                <Route path="login" element={<Auth component={Login} />} />
+                <Route path="signup" element={<Auth component={Register} />} />
                 <Route
                   path="profile"
                   element={<Private component={Profile} />}
@@ -35,9 +37,6 @@ const Router = () => {
                 <Route path="courses/:id" element={<SingleCourse />} />
                 <Route path="courses/:id/edit" element={<EditCourse />} />
               </Route>
-              {/* Rutas de Usuario*/}
-              <Route path="login" element={<Auth component={Login} />} />
-              <Route path="signup" element={<Auth component={Register} />} />
             </Routes>
           </BrowserRouter>
         </CourseState>

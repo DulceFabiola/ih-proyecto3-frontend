@@ -1,58 +1,59 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
     <div>
-      <footer class="mt-24 bg-gray-900 sm:mt-12">
-        <div class="mx-auto max-w-md py-12 px-4 overflow-hidden sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
+      <footer className="mt-24 bg-platzo-200 sm:mt-12">
+        <div className="mx-auto max-w-md py-12 px-4 overflow-hidden sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
           <nav
-            class="-mx-5 -my-2 flex flex-wrap justify-center"
+            className="-mx-5 -my-2 flex flex-wrap justify-center"
             aria-label="Footer"
           >
-            <div class="px-5 py-2">
-              <a href="#" class="text-base text-gray-400 hover:text-gray-300">
-                About
-              </a>
+            <div className="px-5 py-2">
+              <Link
+                to="/"
+                className="text-base text-platzo-300 hover:text-gray-300"
+              >
+                Sobre Fluency
+              </Link>
             </div>
 
-            <div class="px-5 py-2">
-              <a href="#" class="text-base text-gray-400 hover:text-gray-300">
+            <div className="px-5 py-2">
+              <Link
+                to="/"
+                className="text-base text-platzo-300 hover:text-gray-300"
+              >
                 Blog
-              </a>
+              </Link>
             </div>
 
-            <div class="px-5 py-2">
-              <a href="#" class="text-base text-gray-400 hover:text-gray-300">
-                Jobs
-              </a>
+            <div className="px-5 py-2">
+              <Link
+                to="/"
+                className="text-base text-platzo-300 hover:text-gray-300"
+              >
+                Teachers
+              </Link>
             </div>
 
-            <div class="px-5 py-2">
-              <a href="#" class="text-base text-gray-400 hover:text-gray-300">
-                Press
-              </a>
-            </div>
-
-            <div class="px-5 py-2">
-              <a href="#" class="text-base text-gray-400 hover:text-gray-300">
-                Accessibility
-              </a>
-            </div>
-
-            <div class="px-5 py-2">
-              <a href="#" class="text-base text-gray-400 hover:text-gray-300">
-                Partners
-              </a>
+            <div className="px-5 py-2">
+              <Link
+                to="/"
+                className="text-base text-platzo-300 hover:text-gray-300"
+              >
+                Planes
+              </Link>
             </div>
           </nav>
-          <div class="mt-8 flex justify-center space-x-6">
+          <div className="mt-8 flex justify-center space-x-6">
             <a
               href="https://twitter.com/DulcefabiolaRm"
-              class="text-gray-400 hover:text-gray-300"
+              className="text-gray-400 hover:text-gray-300"
             >
-              <span class="sr-only">Twitter</span>
+              <span className="sr-only">Twitter</span>
               <svg
-                class="h-6 w-6"
+                className="h-6 w-6 text-platzo-300"
                 fill="currentColor"
                 viewBox="0 0 24 24"
                 aria-hidden="true"
@@ -63,11 +64,11 @@ const Footer = () => {
 
             <a
               href="https://github.com/DulceFabiola"
-              class="text-gray-400 hover:text-gray-300"
+              className="text-gray-400 hover:text-gray-300"
             >
-              <span class="sr-only">GitHub</span>
+              <span className="sr-only">GitHub</span>
               <svg
-                class="h-6 w-6"
+                className="h-6 w-6 text-platzo-300"
                 fill="currentColor"
                 viewBox="0 0 24 24"
                 aria-hidden="true"
@@ -82,11 +83,11 @@ const Footer = () => {
 
             <a
               href="https://www.linkedin.com/in/fabiola-rodr%C3%ADguez-miranda-a77207142/"
-              class="text-gray-400 hover:text-gray-300"
+              className="text-gray-400 hover:text-gray-300"
             >
-              <span class="sr-only">Linkedin</span>
+              <span className="sr-only">Linkedin</span>
               <svg
-                class="h-6 w-6"
+                className="h-6 w-6 text-platzo-300"
                 fill="currentColor"
                 viewBox="0 0 24 24"
                 aria-hidden="true"
@@ -99,7 +100,7 @@ const Footer = () => {
               </svg>
             </a>
           </div>
-          <p class="mt-8 text-center text-base text-gray-400">
+          <p className="mt-8 text-center text-base text-platzo-300">
             &copy; 2021 Languages. Todos los derechos reservados.
           </p>
         </div>

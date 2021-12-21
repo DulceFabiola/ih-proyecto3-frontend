@@ -25,14 +25,14 @@ const Register = () => {
     registerUser(newUser);
   };
   return (
-    <div className=" w-auto justify-center items-center">
-      <div className="min-h-full  bg-white flex ">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-auto justify-center items-center">
+      <div className="min-h-full  bg-white flex  mt-10 ">
         <div className="flex-1 flex flex-col justify-center py-12 px-4 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
           <div className="mx-auto w-full max-w-sm lg:w-96">
             <div>
               <img
-                className="h-12 w-auto"
-                src="./../.././../images/idiomas.png"
+                className="h-20 w-auto"
+                src="./../.././../images/iconoE.png"
                 alt="Workflow"
               />
               <h2 className="mt-6 text-3xl font-extrabold text-gray-900">
@@ -134,7 +134,7 @@ const Register = () => {
                   <div>
                     <button
                       type="submit"
-                      className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                      className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-platzo-200 hover:bg-platzo-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                     >
                       Crear cuenta
                     </button>

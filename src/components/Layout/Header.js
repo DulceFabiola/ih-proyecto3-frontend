@@ -18,7 +18,7 @@ const Header = () => {
 
   return (
     <>
-      <nav className="bg-gray-800">
+      <nav className="bg-platzo-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16">
             <div className="flex">
@@ -82,12 +82,12 @@ const Header = () => {
                 <Link to="/">
                   <img
                     className="block lg:hidden h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
-                    alt="Workflow"
+                    src="./../../../images/fluency.png"
+                    alt="fluency"
                   />
                   <img
                     className="hidden lg:block h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/workflow-logo-indigo-500-mark-white-text.svg"
+                    src="./../../../images/fluency.png"
                     alt="Workflow"
                   />
                 </Link>
@@ -114,7 +114,7 @@ const Header = () => {
                   {/* <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" --> */}
                   <Link
                     to="/"
-                    className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
+                    className="hover:bg-gray-700 hover:text-white text-platzo-300 px-3 py-2 rounded-md text-sm font-medium"
                     aria-current="page"
                   >
                     Sobre nosotros
@@ -122,7 +122,7 @@ const Header = () => {
 
                   <Link
                     to="/"
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                    className="text-platzo-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                   >
                     Encuentra un teacher
                   </Link>
@@ -277,7 +277,7 @@ const Header = () => {
                   {/* <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" --> */}
                   <Link
                     to="/login"
-                    className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
+                    className="bg-platzo-00 text-white px-3 py-2 rounded-md text-sm font-medium"
                     aria-current="page"
                   >
                     ¡Inicia sesión!
