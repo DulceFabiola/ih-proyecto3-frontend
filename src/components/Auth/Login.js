@@ -4,13 +4,13 @@ import UserContext from "../../context/User/UserContext";
 
 const Login = () => {
   const ctx = useContext(UserContext);
-  const { loginUser } = ctx;
+  const { loginUser, msg } = ctx;
   // 1. ESTADO LOCAL
   const [logUser, setLogUser] = useState({
     email: "",
     password: "",
   });
-
+  console.log(msg);
   const handleChange = (e) => {
     e.preventDefault();
 
@@ -101,10 +101,14 @@ const Login = () => {
                       </Link>
                     </div>
                   </div>
-
+                  <div className="flex items-center justify-between">
+                    <div className="text-sm font-medium text-red-500">
+                      {msg && <p>{msg}</p>}
+                    </div>
+                  </div>
                   <button
                     type="submit"
-                    className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-platzo-200 hover:bg-platzo-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-platzo-100"
+                    className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium  bg-platzo-400 text-white hover:bg-platzo-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-platzo-100"
                   >
                     Inicia sesión
                   </button>

@@ -10,6 +10,7 @@ const reducer = (globalState, action) => {
       };
 
     case "REGISTER_ERROR":
+    case "LOGIN_ERROR":
       return {
         ...globalState,
         authStatus: false,

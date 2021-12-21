@@ -43,15 +43,21 @@ const UserState = (props) => {
   };
 
   const loginUser = async (form) => {
-    try {
-      const res = await axiosClient.post("users/login", form);
-      const token = res.data.data;
+    const res = await axiosClient.post("users/login", form);
+    const token = res.data.data;
+    const msg = res.data.msg;
+
+    console.log(res.data);
+    if (msg) {
+      dispatch({
+        type: "LOGIN_ERROR",
+        payload: msg,
+      });
+    } else {
       dispatch({
         type: "LOGIN_EXITOSO",
         payload: token,
       });
-    } catch (error) {
-      console.log(error);
     }
   };
 

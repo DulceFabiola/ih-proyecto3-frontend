@@ -47,7 +47,7 @@ const OurTeachers = () => {
                         <div className="space-y-2">
                           <div className="text-lg leading-6 font-medium space-y-1">
                             <h3>Teacher: {element.name}</h3>
-                            <p className="text-indigo-600">Contacto:</p>
+                            <p className="text-platzo-900">Contacto:</p>
                             <h3>{element.email}</h3>
                           </div>
                         </div>
