@@ -15,12 +15,7 @@ const reducer = (globalState, action) => {
 
         singleCourse: action.payload,
       };
-    case "GET_TEACHERS":
-      return {
-        //operador spread, hay que clonar el estado global y hacer el cambio
-        ...globalState,
-        teachers: action.payload,
-      };
+
     default:
       return globalState;
   }

@@ -28,7 +28,6 @@ const CourseState = (props) => {
       link: "",
       owner: "",
     },
-    teachers: [],
   };
   //2.CONFIGURACION DE REDUCER Y CREACION DE ESTADO GLOBAL
   //para cambios en el estado inicial
@@ -76,30 +75,17 @@ const CourseState = (props) => {
     const res = await axiosClient.delete(`courses/delete/${idCourse}`);
   };
 
-  //LEER TEACHERS
-  const getTeachers = async () => {
-    const res = await axiosClient.get("users/readAll");
-    const teachersList = res.data.data;
-    dispatch({
-      //este objeto se conoce como action
-      type: "GET_TEACHERS",
-      payload: teachersList,
-    });
-  };
-
   //4.RETORNO
   return (
     <CourseContext.Provider
       value={{
         courses: globalState.courses,
         singleCourse: globalState.singleCourse,
-        teachers: globalState.teachers,
         getCourses,
         getCourse,
         createCourse,
         updateCourse,
         deleteCourse,
-        getTeachers,
       }}
     >
       {props.children}
