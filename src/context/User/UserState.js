@@ -16,6 +16,7 @@ const UserState = (props) => {
       image: "",
       experience: "",
       role: "",
+      myCourses: [],
     },
     authStatus: false,
     msg: "",
@@ -87,6 +88,7 @@ const UserState = (props) => {
   const updateProfile = async (form, idUser) => {
     const res = await axiosClient.put(`users/editprofile/${idUser}`, form);
   };
+
   // 4. RETORNO
   return (
     <UserContext.Provider
@@ -94,6 +96,7 @@ const UserState = (props) => {
         currentUser: globalState.currentUser,
         authStatus: globalState.authStatus,
         msg: globalState.msg,
+        myCourses: globalState.myCourses,
         registerUser,
         loginUser,
         verifyingToken,

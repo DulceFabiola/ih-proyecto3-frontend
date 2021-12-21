@@ -205,7 +205,7 @@ const Header = () => {
                           <span className="sr-only">Abrir menu de usuario</span>
                           {currentUser.image ? (
                             <img
-                              class="h-16 w-16 rounded-full"
+                              class="h-10 w-10 rounded-full"
                               src={currentUser.image}
                               alt=""
                             />

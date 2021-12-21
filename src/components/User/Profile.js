@@ -16,7 +16,7 @@ const Profile = () => {
                 <div class="relative">
                   {currentUser.image ? (
                     <img
-                      class="h-16 w-16 rounded-full"
+                      class="h-10 w-10 rounded-full"
                       src={currentUser.image}
                       alt=""
                     />

@@ -1,10 +1,13 @@
 import React, { useContext, useEffect } from "react";
 import GuitarContext from "./../../../context/Course/CourseContext";
+import UserContext from "../../../context/User/UserContext";
 import { Link, useParams } from "react-router-dom";
 
 const SingleCourse = () => {
   const ctx = useContext(GuitarContext);
+  const userCtx = useContext(UserContext);
   const { getCourse, singleCourse, deleteCourse } = ctx;
+  const { currentUser } = userCtx;
 
   //obtener el id de la url
   const params = useParams();
@@ -97,46 +100,48 @@ const SingleCourse = () => {
           </dl>
         </div>
       </div>
-      <div class="pt-5">
-        <div class="flex justify-end">
-          <Link to="/courses">
+      {currentUser.role === "Alumno" ? (
+        <div class="pt-5">
+          <div class="flex justify-end">
+            <Link to="/courses">
+              <button
+                type="button"
+                class="bg-white py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+              >
+                Todos los cursos
+              </button>
+            </Link>
             <button
-              type="button"
-              class="bg-white py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-            >
-              Todos los cursos
-            </button>
-          </Link>
-          <button
-            type="submit"
-            class="ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-          >
-            Inscribir curso
-          </button>
-        </div>
-      </div>
-
-      <div class="pt-5">
-        <div class="flex justify-end">
-          <Link to="/courses">
-            <button
-              onClick={() => deleteCourse(id)}
-              type="button"
-              class="bg-white py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-            >
-              Eliminar curso
-            </button>
-          </Link>
-          <Link to={`/courses/${singleCourse._id}/edit`}>
-            <button
-              type="button"
+              type="submit"
               class="ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
             >
-              Editar curso
+              Inscribir curso
             </button>
-          </Link>
+          </div>
         </div>
-      </div>
+      ) : (
+        <div class="pt-5">
+          <div class="flex justify-end">
+            <Link to="/courses">
+              <button
+                onClick={() => deleteCourse(id)}
+                type="button"
+                class="bg-white py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+              >
+                Eliminar curso
+              </button>
+            </Link>
+            <Link to={`/courses/${singleCourse._id}/edit`}>
+              <button
+                type="button"
+                class="ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+              >
+                Editar curso
+              </button>
+            </Link>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

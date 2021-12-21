@@ -18,5 +18,5 @@ export default function AuthRoute({ component: Component, ...props }) {
     verifyStatus();
   }, [authStatus]);
 
-  return <>{authStatus ? <Navigate replace to="/profile" /> : <Component />}</>;
+  return <>{authStatus ? <Navigate replace to="/courses" /> : <Component />}</>;
 }

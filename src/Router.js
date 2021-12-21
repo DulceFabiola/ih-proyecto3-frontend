@@ -22,7 +22,7 @@ const Router = () => {
           <BrowserRouter>
             <Routes>
               <Route path="/" element={<Layout />}>
-                <Route index element={<Home />} />
+                <Route index element={<Auth component={Home} />} />
                 {/* Rutas de Usuario*/}
                 <Route
                   path="profile"
