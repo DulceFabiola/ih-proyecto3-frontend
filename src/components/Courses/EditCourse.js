@@ -329,6 +329,9 @@ const EditCourse = () => {
                   </label>
                   <div className="mt-1 sm:mt-0 sm:col-span-2">
                     <textarea
+                      onChange={(event) => {
+                        handleChange(event);
+                      }}
                       name="subject"
                       rows="3"
                       value={courseData.subject}
