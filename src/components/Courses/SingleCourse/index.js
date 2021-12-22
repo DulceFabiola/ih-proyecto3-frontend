@@ -16,6 +16,7 @@ const SingleCourse = () => {
   useEffect(() => {
     getCourse(id);
   }, []);
+
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10">
       {/* <!-- This example requires Tailwind CSS v2.0+ --> */}
@@ -93,9 +94,11 @@ const SingleCourse = () => {
             </div>
             <div className="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
               <dt className="text-sm font-medium text-gray-500">Teacher</dt>
-              <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                {singleCourse.owner}
-              </dd>
+              <Link to={`/teachers/${singleCourse.owner}`}>
+                <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                  {singleCourse.owner}
+                </dd>
+              </Link>
             </div>
           </dl>
         </div>
@@ -120,27 +123,31 @@ const SingleCourse = () => {
           </div>
         </div>
       ) : (
-        <div class="pt-5">
-          <div class="flex justify-end">
-            <Link to="/courses">
-              <button
-                onClick={() => deleteCourse(id)}
-                type="button"
-                class="bg-white py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-              >
-                Eliminar curso
-              </button>
-            </Link>
-            <Link to={`/courses/${singleCourse._id}/edit`}>
-              <button
-                type="button"
-                class="ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md  bg-platzo-400 text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-              >
-                Editar curso
-              </button>
-            </Link>
-          </div>
-        </div>
+        <>
+          {singleCourse.owner === currentUser._id && (
+            <div class="pt-5">
+              <div class="flex justify-end">
+                <Link to="/courses">
+                  <button
+                    onClick={() => deleteCourse(id)}
+                    type="button"
+                    class="bg-white py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                  >
+                    Eliminar curso
+                  </button>
+                </Link>
+                <Link to={`/courses/${singleCourse._id}/edit`}>
+                  <button
+                    type="button"
+                    class="ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md  bg-platzo-400 text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                  >
+                    Editar curso
+                  </button>
+                </Link>
+              </div>
+            </div>
+          )}
+        </>
       )}
     </div>
   );
