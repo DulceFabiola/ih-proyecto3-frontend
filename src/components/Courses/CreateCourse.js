@@ -1,11 +1,14 @@
 import React, { useState, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import CourseContext from "../../context/Course/CourseContext";
+import UserContext from "../../context/User/UserContext";
 const CreateCourse = () => {
   const navigate = useNavigate();
   //1. ESTADO GLOBAL
   const ctx = useContext(CourseContext);
+  const userCtx = useContext(UserContext);
   const { createCourse } = ctx;
+  const { currentUser } = userCtx;
 
   //2.ESTADO LOCAL
   const [newCourse, setNewCourse] = useState({
@@ -18,7 +21,7 @@ const CreateCourse = () => {
     days: "",
     subject: "",
     link: "",
-    owner: "",
+    owner: currentUser._id,
   });
 
   //3.FUNCIONES
