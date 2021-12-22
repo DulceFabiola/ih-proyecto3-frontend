@@ -116,7 +116,7 @@ const EditCourse = () => {
                         handleChange(event);
                       }}
                       type="text"
-                      name="level"
+                      name="language"
                       value={courseData.language}
                       required
                       className="max-w-lg block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:max-w-xs sm:text-sm border-gray-300 rounded-md"
