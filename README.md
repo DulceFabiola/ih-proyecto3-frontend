@@ -1,70 +1,108 @@
-# Getting Started with Create React App
+# FLUENCY
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[Fluency](https://fluency.netlify.app/) proyecto desarrollado en React y CSS, Tailwind por parte del frontend.
 
-## Available Scripts
+## Inicializando el proyecto
 
-In the project directory, you can run:
+#### Dependecias
 
-### `npm start`
+- Es necesario instalar las dependencias, tan pronto se clone el proyecto.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```shell
+$ npm install
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Una vez hecho esto, crear un archivo `.env` para generar las variables de entorno.
 
-### `npm test`
+`.env`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+REACT_APP_BACKEND_URL='API_BACKEND'
+```
 
-### `npm run build`
+Para correr la aplicación de manera local, deberá ejecutar:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### `npm run start`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+puede visualizar el proyecto en el navegador:
+[http://localhost:3000](http://localhost:3000).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+##Estructura del proyecto
 
-### `npm run eject`
+**El proyecto se estructura de la siguiente manera:**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- public
+- src
+  - componentes
+  - config
+  - context
+  - routes
+- Hoja de estilos
+- Archivo principal de JS
+- Router
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Páginas de Fluency
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Home
+- Registro
+- Inicia sesión
+- Mi perfil
+- Cursos disponibles
+- Detalles de curso
+- Encuentra un teacher
+- Algo más sobre un teacher
+- Planes
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Componentes
 
-## Learn More
+#### Home
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+El home es una página que se renderiza solamente cuando el usuario no está autenticado y su proposito es meramente hablar sobre Fluency y su próposito en el mercado.
+http://localhost:3000
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### Register
 
-### Code Splitting
+Página de autenticación, cuentan con la integración de un manejo de errores, email previamente registrado. [Registro](http://localhost:3000/signup)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+#### Login
 
-### Analyzing the Bundle Size
+Página de autenticación, cuentan con la integración de un manejo de errores, email inválido, password o email incorrecto. [Inicio de sesión](http://localhost:3000/login)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+#### Mi perfil
 
-### Making a Progressive Web App
+Perfil de usuario, renderiza la información general del usuario, y le permite actualizar datos. [Mi perfil](http://localhost:3000/profile)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Fluency tiene dos tipos de usuarios: teacher y alumno.
 
-### Advanced Configuration
+Para usuarios con rol de tipo alumno, se renderiza un monitoreo con estadisticas de su aprendizaje y cursos inscritos.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Para usuario con role de tipo teacher, se renderizan los cursos creados por el usuario.
 
-### Deployment
+### Cursos disponibles
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+En está vista se renderizan nuestros cursos actuales y disponibles, creados por los teachers.
+[Nuestros cursos](http://localhost:3000/courses)
 
-### `npm run build` fails to minify
+### Detalles de curso
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Cada curso tiene una página con el detalle completo. Basta con dar click a uno en especifico para redireccionarlo [detalles de curso](http://localhost:3000/courses/61c2afd4bc2ae07e06968467).
+
+En caso de ser el autor del curso, se habilitará la opción de editar o eliminar curso.
+
+En caso de ser alumno, se habilita la opción de inscribir curso.
+
+### Encuentra un teacher
+
+Está página nos muestran los teachers actuales de fluency, [nuestros teachers](http://localhost:3000/teachers).
+
+### Algo más sobre un teacher
+
+Cada teacher tiene una página con el detalle completo. Basta con dar click a uno en especifico para redireccionarlo [detalles de teacher](http://localhost:3000/teachers/61c2ade52e81b92bf3a25bb9).
+
+### Planes
+
+En la página de planes se redirecciona para realizar el pago por el curso a inscribir. [Planes](http://localhost:3000/plans)
+
+### Gracias por su tiempo y eneseñanza
+
+A Teacher [Mike](https://github.com/mikenieva), [Sam](https://github.com/ta-web-mex) y [K'ohnin](https://github.com/konhin2)
