@@ -17,6 +17,7 @@ import Private from "./routes/Private";
 import OurTeachers from "./components/Teachers.js/OurTeachers";
 import TeacherDetails from "./components/Teachers.js/TeacherDetails";
 import TeacherState from "./context/Teachers/TeacherState";
+import Plans from "./components/Plans/Plans";
 const Router = () => {
   return (
     <>
@@ -44,8 +45,13 @@ const Router = () => {
                   <Route path="courses/:id" element={<SingleCourse />} />
                   <Route path="courses/:id/edit" element={<EditCourse />} />
                   {/* Rutas de Nuestros profesores */}
-                  <Route path="teachers" element={<OurTeachers />} />
+                  <Route
+                    path="teachers"
+                    element={<Private component={OurTeachers} />}
+                  />
                   <Route path="teachers/:id" element={<TeacherDetails />} />
+                  {/* Plans */}
+                  <Route path="plans" element={<Plans />} />
                 </Route>
               </Routes>
             </BrowserRouter>

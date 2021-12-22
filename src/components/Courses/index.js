@@ -6,10 +6,10 @@ const Courses = () => {
   const ctx = useContext(CourseContext);
   const { courses, getCourses } = ctx;
   //ESTADO LOCAL
-  // EL MOMENTO EN QUE SE EJECUTA EL USE EFFECT ES DESPUÉS DEL RETURN.
+
   useEffect(() => {
     getCourses();
-  }, []); // CUANDO HAY UN ARREGLO VACÍO, SIGNIFICA QUE VA A EJECUTARSE UNA SOLA VEZ.
+  }, []);
 
   return (
     <>

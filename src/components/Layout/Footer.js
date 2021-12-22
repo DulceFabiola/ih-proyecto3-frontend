@@ -30,7 +30,7 @@ const Footer = () => {
 
             <div className="px-5 py-2">
               <Link
-                to="/"
+                to="/teachers"
                 className="text-base text-platzo-300 hover:text-gray-300"
               >
                 Teachers
@@ -39,7 +39,7 @@ const Footer = () => {
 
             <div className="px-5 py-2">
               <Link
-                to="/"
+                to="/plans"
                 className="text-base text-platzo-300 hover:text-gray-300"
               >
                 Planes
