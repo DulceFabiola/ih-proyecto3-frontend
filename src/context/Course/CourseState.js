@@ -17,6 +17,7 @@ const CourseState = (props) => {
     courses: [],
     singleCourse: {
       _id: "",
+      language: "",
       level: "",
       inscriptionDate: "",
       startDate: "",
@@ -26,6 +27,7 @@ const CourseState = (props) => {
       days: "",
       subject: "",
       link: "",
+      image: "",
       owner: "",
     },
   };

@@ -7,24 +7,24 @@ const Profile = () => {
   const { currentUser } = ctx;
   return (
     <>
-      <div class="min-h-full">
-        <main class="py-10 ">
+      <div className="min-h-full">
+        <main className="py-10 ">
           {/* <!-- Page header --> */}
-          <div class="max-w-3xl mx-auto px-4 sm:px-6 md:flex md:items-center md:justify-between md:space-x-5 lg:max-w-7xl lg:px-8">
-            <div class="flex items-center space-x-5">
-              <div class="flex-shrink-0">
-                <div class="relative">
+          <div className="max-w-3xl mx-auto px-4 sm:px-6 md:flex md:items-center md:justify-between md:space-x-5 lg:max-w-7xl lg:px-8">
+            <div className="flex items-center space-x-5">
+              <div className="flex-shrink-0">
+                <div className="relative">
                   {currentUser.image ? (
                     <img
-                      class="h-10 w-10 rounded-full"
+                      className="h-10 w-10 rounded-full"
                       src={currentUser.image}
                       alt=""
                     />
                   ) : (
                     <>
-                      <span class="inline-block h-14 w-14 rounded-full overflow-hidden bg-gray-100">
+                      <span className="inline-block h-14 w-14 rounded-full overflow-hidden bg-gray-100">
                         <svg
-                          class="h-full w-full text-gray-300"
+                          className="h-full w-full text-gray-300"
                           fill="currentColor"
                           viewBox="0 0 24 24"
                         >
@@ -35,88 +35,88 @@ const Profile = () => {
                   )}
 
                   <span
-                    class="absolute inset-0 shadow-inner rounded-full"
+                    className="absolute inset-0 shadow-inner rounded-full"
                     aria-hidden="true"
                   ></span>
                 </div>
               </div>
               <div>
-                <h1 class="text-2xl font-bold text-gray-900">
+                <h1 className="text-2xl font-bold text-gray-900">
                   {currentUser.name}
                 </h1>
-                <p class="text-sm font-medium text-gray-500">
+                <p className="text-sm font-medium text-gray-500">
                   Rol: {currentUser.role}
                 </p>
               </div>
             </div>
           </div>
 
-          <div class="mt-8 max-w-3xl mx-auto grid grid-cols-1 gap-6 sm:px-6 lg:max-w-7xl lg:grid-flow-col-dense lg:grid-cols-3">
-            <div class="space-y-6 lg:col-start-1 lg:col-span-2">
+          <div className="mt-8 max-w-3xl mx-auto grid grid-cols-1 gap-6 sm:px-6 lg:max-w-7xl lg:grid-flow-col-dense lg:grid-cols-3">
+            <div className="space-y-6 lg:col-start-1 lg:col-span-2">
               {/* <!-- Description list--> */}
               <section aria-labelledby="applicant-information-title">
-                <div class="bg-white shadow sm:rounded-lg">
-                  <div class="px-4 py-5 sm:px-6">
+                <div className="bg-white shadow sm:rounded-lg">
+                  <div className="px-4 py-5 sm:px-6">
                     <h2
                       id="applicant-information-title"
-                      class="text-lg leading-6 font-medium text-gray-900"
+                      className="text-lg leading-6 font-medium text-gray-900"
                     >
                       Información personal
                     </h2>
-                    <p class="mt-1 max-w-2xl text-sm text-gray-500">
+                    <p className="mt-1 max-w-2xl text-sm text-gray-500">
                       Detalles personales
                     </p>
                   </div>
-                  <div class="border-t border-gray-200 px-4 py-5 sm:px-6">
-                    <dl class="grid grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-2">
-                      <div class="sm:col-span-1">
-                        <dt class="text-sm font-medium text-gray-500">
+                  <div className="border-t border-gray-200 px-4 py-5 sm:px-6">
+                    <dl className="grid grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-2">
+                      <div className="sm:col-span-1">
+                        <dt className="text-sm font-medium text-gray-500">
                           Nombre
                         </dt>
-                        <dd class="mt-1 text-sm text-gray-900">
+                        <dd className="mt-1 text-sm text-gray-900">
                           {currentUser.name}
                         </dd>
                       </div>
-                      <div class="sm:col-span-1">
-                        <dt class="text-sm font-medium text-gray-500">
+                      <div className="sm:col-span-1">
+                        <dt className="text-sm font-medium text-gray-500">
                           Apellido
                         </dt>
-                        <dd class="mt-1 text-sm text-gray-900">
+                        <dd className="mt-1 text-sm text-gray-900">
                           {currentUser.lastname ? currentUser.lastname : "-"}
                         </dd>
                       </div>
-                      <div class="sm:col-span-1">
-                        <dt class="text-sm font-medium text-gray-500">
+                      <div className="sm:col-span-1">
+                        <dt className="text-sm font-medium text-gray-500">
                           Dirección electrónica
                         </dt>
-                        <dd class="mt-1 text-sm text-gray-900">
+                        <dd className="mt-1 text-sm text-gray-900">
                           {currentUser.email}
                         </dd>
                       </div>
-                      <div class="sm:col-span-1">
-                        <dt class="text-sm font-medium text-gray-500">
+                      <div className="sm:col-span-1">
+                        <dt className="text-sm font-medium text-gray-500">
                           {" "}
                           Experiencia
                         </dt>
-                        <dd class="mt-1 text-sm text-gray-900">
+                        <dd className="mt-1 text-sm text-gray-900">
                           {currentUser.experience
                             ? currentUser.experience
                             : "-"}
                         </dd>
                       </div>
-                      <div class="sm:col-span-1">
-                        <dt class="text-sm font-medium text-gray-500">
+                      <div className="sm:col-span-1">
+                        <dt className="text-sm font-medium text-gray-500">
                           Ciudad
                         </dt>
-                        <dd class="mt-1 text-sm text-gray-900">
+                        <dd className="mt-1 text-sm text-gray-900">
                           {currentUser.country ? currentUser.country : "-"}
                         </dd>
                       </div>
-                      <div class="sm:col-span-1">
-                        <dt class="text-sm font-medium text-gray-500">
+                      <div className="sm:col-span-1">
+                        <dt className="text-sm font-medium text-gray-500">
                           Sobre mi:
                         </dt>
-                        <dd class="mt-1 text-sm text-gray-900">
+                        <dd className="mt-1 text-sm text-gray-900">
                           {currentUser.description
                             ? currentUser.description
                             : "-"}
@@ -127,7 +127,7 @@ const Profile = () => {
                   <div>
                     <Link
                       to={`/editprofile/${currentUser._id}`}
-                      class="block bg-gray-50 text-sm font-medium text-gray-500 text-center px-4 py-4 hover:text-gray-700 sm:rounded-b-lg"
+                      className="block bg-gray-50 text-sm font-medium text-gray-500 text-center px-4 py-4 hover:text-gray-700 sm:rounded-b-lg"
                     >
                       Editar perfil
                     </Link>
@@ -137,25 +137,25 @@ const Profile = () => {
               {currentUser.role === "Alumno" && (
                 <section>
                   <div>
-                    <h3 class="text-lg leading-6 font-medium text-gray-900">
+                    <h3 className="text-lg leading-6 font-medium text-gray-900">
                       My space Learning
                     </h3>
-                    <dl class="mt-5 grid grid-cols-1 rounded-lg bg-white overflow-hidden shadow divide-y divide-gray-200 md:grid-cols-3 md:divide-y-0 md:divide-x">
-                      <div class="px-4 py-5 sm:p-6">
-                        <dt class="text-base font-normal text-gray-900">
+                    <dl className="mt-5 grid grid-cols-1 rounded-lg bg-white overflow-hidden shadow divide-y divide-gray-200 md:grid-cols-3 md:divide-y-0 md:divide-x">
+                      <div className="px-4 py-5 sm:p-6">
+                        <dt className="text-base font-normal text-gray-900">
                           Reading
                         </dt>
-                        <dd class="mt-1 flex justify-between items-baseline md:block lg:flex">
-                          <div class="flex items-baseline text-2xl font-semibold text-indigo-600">
+                        <dd className="mt-1 flex justify-between items-baseline md:block lg:flex">
+                          <div className="flex items-baseline text-2xl font-semibold text-indigo-600">
                             72%
-                            <span class="ml-2 text-sm font-medium text-gray-500">
+                            <span className="ml-2 text-sm font-medium text-gray-500">
                               from 60%
                             </span>
                           </div>
 
-                          <div class="inline-flex items-baseline px-2.5 py-0.5 rounded-full text-sm font-medium bg-green-100 text-green-800 md:mt-2 lg:mt-0">
+                          <div className="inline-flex items-baseline px-2.5 py-0.5 rounded-full text-sm font-medium bg-green-100 text-green-800 md:mt-2 lg:mt-0">
                             <svg
-                              class="-ml-1 mr-0.5 flex-shrink-0 self-center h-5 w-5 text-green-500"
+                              className="-ml-1 mr-0.5 flex-shrink-0 self-center h-5 w-5 text-green-500"
                               xmlns="http://www.w3.org/2000/svg"
                               viewBox="0 0 20 20"
                               fill="currentColor"
@@ -167,27 +167,27 @@ const Profile = () => {
                                 clip-rule="evenodd"
                               />
                             </svg>
-                            <span class="sr-only">Increased by</span>
+                            <span className="sr-only">Increased by</span>
                             12%
                           </div>
                         </dd>
                       </div>
 
-                      <div class="px-4 py-5 sm:p-6">
-                        <dt class="text-base font-normal text-gray-900">
+                      <div className="px-4 py-5 sm:p-6">
+                        <dt className="text-base font-normal text-gray-900">
                           Listening
                         </dt>
-                        <dd class="mt-1 flex justify-between items-baseline md:block lg:flex">
-                          <div class="flex items-baseline text-2xl font-semibold text-indigo-600">
+                        <dd className="mt-1 flex justify-between items-baseline md:block lg:flex">
+                          <div className="flex items-baseline text-2xl font-semibold text-indigo-600">
                             58.16%
-                            <span class="ml-2 text-sm font-medium text-gray-500">
+                            <span className="ml-2 text-sm font-medium text-gray-500">
                               from 56.14%
                             </span>
                           </div>
 
-                          <div class="inline-flex items-baseline px-2.5 py-0.5 rounded-full text-sm font-medium bg-green-100 text-green-800 md:mt-2 lg:mt-0">
+                          <div className="inline-flex items-baseline px-2.5 py-0.5 rounded-full text-sm font-medium bg-green-100 text-green-800 md:mt-2 lg:mt-0">
                             <svg
-                              class="-ml-1 mr-0.5 flex-shrink-0 self-center h-5 w-5 text-green-500"
+                              className="-ml-1 mr-0.5 flex-shrink-0 self-center h-5 w-5 text-green-500"
                               xmlns="http://www.w3.org/2000/svg"
                               viewBox="0 0 20 20"
                               fill="currentColor"
@@ -199,27 +199,27 @@ const Profile = () => {
                                 clip-rule="evenodd"
                               />
                             </svg>
-                            <span class="sr-only">Increased by</span>
+                            <span className="sr-only">Increased by</span>
                             2.02%
                           </div>
                         </dd>
                       </div>
 
-                      <div class="px-4 py-5 sm:p-6">
-                        <dt class="text-base font-normal text-gray-900">
+                      <div className="px-4 py-5 sm:p-6">
+                        <dt className="text-base font-normal text-gray-900">
                           Writting
                         </dt>
-                        <dd class="mt-1 flex justify-between items-baseline md:block lg:flex">
-                          <div class="flex items-baseline text-2xl font-semibold text-indigo-600">
+                        <dd className="mt-1 flex justify-between items-baseline md:block lg:flex">
+                          <div className="flex items-baseline text-2xl font-semibold text-indigo-600">
                             58.16%
-                            <span class="ml-2 text-sm font-medium text-gray-500">
+                            <span className="ml-2 text-sm font-medium text-gray-500">
                               from 56.14%
                             </span>
                           </div>
 
-                          <div class="inline-flex items-baseline px-2.5 py-0.5 rounded-full text-sm font-medium bg-green-100 text-green-800 md:mt-2 lg:mt-0">
+                          <div className="inline-flex items-baseline px-2.5 py-0.5 rounded-full text-sm font-medium bg-green-100 text-green-800 md:mt-2 lg:mt-0">
                             <svg
-                              class="-ml-1 mr-0.5 flex-shrink-0 self-center h-5 w-5 text-green-500"
+                              className="-ml-1 mr-0.5 flex-shrink-0 self-center h-5 w-5 text-green-500"
                               xmlns="http://www.w3.org/2000/svg"
                               viewBox="0 0 20 20"
                               fill="currentColor"
@@ -231,7 +231,7 @@ const Profile = () => {
                                 clip-rule="evenodd"
                               />
                             </svg>
-                            <span class="sr-only">Increased by</span>
+                            <span className="sr-only">Increased by</span>
                             2.02%
                           </div>
                         </dd>
@@ -244,82 +244,86 @@ const Profile = () => {
 
             <section
               aria-labelledby="timeline-title"
-              class="lg:col-start-3 lg:col-span-1"
+              className="lg:col-start-3 lg:col-span-1"
             >
-              <div class="bg-white px-4 py-5 shadow sm:rounded-lg sm:px-6">
+              <div className="bg-white px-4 py-5 shadow sm:rounded-lg sm:px-6">
                 <h2
                   id="timeline-title"
-                  class="text-lg font-medium text-gray-900"
+                  className="text-lg font-medium text-gray-900"
                 >
                   Mis cursos
                 </h2>
 
                 {/* <!-- Activity Feed --> */}
-                <div class="mt-6 flow-root">
-                  <ul role="list" class="-mb-8">
-                    <li>
-                      <div class="relative pb-8">
-                        <span
-                          class="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200"
-                          aria-hidden="true"
-                        ></span>
-                        <div class="relative flex space-x-3">
-                          <div>
-                            <span class="h-8 w-8 rounded-full bg-gray-400 flex items-center justify-center ring-8 ring-white">
-                              {/* <!-- Heroicon name: solid/user --> */}
-                              <svg
-                                class="w-5 h-5 text-white"
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                                aria-hidden="true"
-                              >
-                                <path
-                                  fill-rule="evenodd"
-                                  d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
-                                  clip-rule="evenodd"
-                                />
-                              </svg>
-                            </span>
-                          </div>
-                          <div class="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4">
-                            <div>
-                              <p class="text-sm text-gray-500">
-                                Nivel:
-                                <a href="#" class="font-medium text-gray-900">
-                                  Nivel del curso
-                                </a>
-                              </p>
+                <div className="mt-6 flow-root">
+                  <ul className="-mb-8">
+                    {currentUser.mycourses.map((element, index) => {
+                      return (
+                        <li>
+                          <div className="relative pb-8">
+                            <span
+                              className="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200"
+                              aria-hidden="true"
+                            ></span>
+                            <div className="relative flex space-x-3">
+                              <div>
+                                <span className="h-8 w-8 rounded-full bg-gray-400 flex items-center justify-center ring-8 ring-white">
+                                  {/* <!-- Heroicon name: solid/user --> */}
+                                  <svg
+                                    className="w-5 h-5 text-white"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 20 20"
+                                    fill="currentColor"
+                                    aria-hidden="true"
+                                  >
+                                    <path
+                                      fill-rule="evenodd"
+                                      d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
+                                      clip-rule="evenodd"
+                                    />
+                                  </svg>
+                                </span>
+                              </div>
+                              <div className="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4">
+                                <div>
+                                  <p className="text-sm text-gray-500">
+                                    Curso {index + 1}
+                                  </p>
+                                </div>
+                                <div className="text-right text-sm whitespace-nowrap text-gray-500">
+                                  <p className="text-sm text-gray-500">
+                                    Detalles:
+                                    <Link
+                                      to={`/courses/${element}`}
+                                      className="font-medium text-gray-900"
+                                    >
+                                      del curso
+                                    </Link>
+                                  </p>
+                                </div>
+                              </div>
                             </div>
-                            <div class="text-right text-sm whitespace-nowrap text-gray-500">
-                              <p class="text-sm text-gray-500">
-                                Inicio:
-                                <a href="#" class="font-medium text-gray-900">
-                                  Fecha
-                                </a>
-                              </p>
-                            </div>
                           </div>
-                        </div>
-                      </div>
-                    </li>
+                        </li>
+                      );
+                    })}
                   </ul>
                 </div>
 
                 {currentUser.role === "Teacher" ? (
-                  <div class="mt-6 flex flex-col justify-stretch">
+                  <div className="mt-12 flex flex-col justify-stretch">
                     <button
                       type="button"
-                      class="inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm  bg-platzo-400 text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                      className="inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm  bg-platzo-400 text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
                     >
                       <Link to="/courses/create"> Crear un curso</Link>
                     </button>
                   </div>
                 ) : (
-                  <div class="mt-6 flex flex-col justify-stretch">
+                  <div className="mt-6 flex flex-col justify-stretch">
                     <button
                       type="button"
-                      class="inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm bg-platzo-400 text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                      className="inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm bg-platzo-400 text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
                     >
                       <Link to="/"> Inscribir un curso</Link>
                     </button>

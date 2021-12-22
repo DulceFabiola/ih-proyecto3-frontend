@@ -13,6 +13,7 @@ const EditCourse = () => {
 
   // 2. ESTADO LOCAL
   const [courseData, setCourseData] = useState({
+    language: "",
     level: "",
     inscriptionDate: "",
     startDate: "",
@@ -22,6 +23,7 @@ const EditCourse = () => {
     days: "",
     subject: "",
     link: "",
+    image: "",
     owner: "",
   });
 
@@ -34,6 +36,7 @@ const EditCourse = () => {
   // USEEFFECT PARA ACTUALIZAR LOS DATOS DEL ESTADO GLOBAL AL ESTADO LOCAL
   useEffect(() => {
     const {
+      language,
       level,
       inscriptionDate,
       startDate,
@@ -43,10 +46,12 @@ const EditCourse = () => {
       days,
       subject,
       link,
+      image,
       owner,
     } = ctx.singleCourse;
 
     setCourseData({
+      language: language,
       level: level,
       inscriptionDate: inscriptionDate,
       startDate: startDate,
@@ -56,6 +61,7 @@ const EditCourse = () => {
       days: days,
       subject: subject,
       link: link,
+      image: image,
       owner: owner,
     });
   }, [singleCourse]);
@@ -93,10 +99,30 @@ const EditCourse = () => {
                   Editar curso
                 </h3>
                 <p className="mt-1 max-w-2xl text-sm text-gray-500">
-                  Idioma: Inglés
+                  Cambiando el mundo
                 </p>
               </div>
               <div className="space-y-6 sm:space-y-5">
+                <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+                  <label
+                    for="first-name"
+                    className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2"
+                  >
+                    Idioma
+                  </label>
+                  <div className="mt-1 sm:mt-0 sm:col-span-2">
+                    <input
+                      onChange={(event) => {
+                        handleChange(event);
+                      }}
+                      type="text"
+                      name="level"
+                      value={courseData.language}
+                      required
+                      className="max-w-lg block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:max-w-xs sm:text-sm border-gray-300 rounded-md"
+                    />
+                  </div>
+                </div>
                 <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
                   <label
                     for="first-name"
@@ -265,6 +291,28 @@ const EditCourse = () => {
                         type="text"
                         name="link"
                         value={courseData.link}
+                        required
+                        className="flex-1 block w-full focus:ring-indigo-500 focus:border-indigo-500 min-w-0 rounded-none rounded-r-md sm:text-sm border-gray-300"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+                  <label
+                    for="username"
+                    className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2"
+                  >
+                    Imagen
+                  </label>
+                  <div className="mt-1 sm:mt-0 sm:col-span-2">
+                    <div className="max-w-lg flex rounded-md shadow-sm">
+                      <input
+                        onChange={(event) => {
+                          handleChange(event);
+                        }}
+                        type="text"
+                        name="image"
+                        value={courseData.image}
                         required
                         className="flex-1 block w-full focus:ring-indigo-500 focus:border-indigo-500 min-w-0 rounded-none rounded-r-md sm:text-sm border-gray-300"
                       />

@@ -12,6 +12,7 @@ const CreateCourse = () => {
 
   //2.ESTADO LOCAL
   const [newCourse, setNewCourse] = useState({
+    language: "",
     level: "",
     inscriptionDate: "",
     startDate: "",
@@ -21,6 +22,7 @@ const CreateCourse = () => {
     days: "",
     subject: "",
     link: "",
+    image: "",
     owner: currentUser._id,
   });
 
@@ -55,9 +57,30 @@ const CreateCourse = () => {
               <h3 class="text-2xl mb-4 leading-6 font-medium text-gray-900">
                 Dar de alta un curso
               </h3>
-              <p class="mt-1 max-w-2xl text-sm text-gray-500">Idioma: Inglés</p>
+              <p class="mt-1 max-w-2xl text-sm text-gray-500">
+                Cambiando el mundo
+              </p>
             </div>
             <div class="space-y-6 sm:space-y-5">
+              <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+                <label
+                  for="first-name"
+                  class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2"
+                >
+                  Idioma
+                </label>
+                <div class="mt-1 sm:mt-0 sm:col-span-2">
+                  <input
+                    onChange={(event) => {
+                      handleChange(event);
+                    }}
+                    type="text"
+                    name="language"
+                    required
+                    class="max-w-lg block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:max-w-xs sm:text-sm border-gray-300 rounded-md"
+                  />
+                </div>
+              </div>
               <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
                 <label
                   for="first-name"
@@ -207,6 +230,26 @@ const CreateCourse = () => {
             </div>
 
             <div class="mt-6 sm:mt-5 space-y-6 sm:space-y-5">
+              <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+                <label
+                  for="username"
+                  class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2"
+                >
+                  Imagen
+                </label>
+                <div class="mt-1 sm:mt-0 sm:col-span-2">
+                  <div class="max-w-lg flex rounded-md shadow-sm">
+                    <input
+                      onChange={(event) => {
+                        handleChange(event);
+                      }}
+                      type="text"
+                      name="image"
+                      class="flex-1 block w-full focus:ring-indigo-500 focus:border-indigo-500 min-w-0 rounded-none rounded-r-md sm:text-sm border-gray-300"
+                    />
+                  </div>
+                </div>
+              </div>
               <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
                 <label
                   for="username"

@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 const OurTeachers = () => {
   const ctx = useContext(TeacherContext);
   const { teachers, getTeachers } = ctx;
-  console.log(teachers);
   useEffect(() => {
     getTeachers();
   }, []);
