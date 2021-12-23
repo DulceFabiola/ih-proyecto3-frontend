@@ -1,9 +1,10 @@
 import React, { useContext, useEffect, useState } from "react";
 import CourseContext from "./../../../context/Course/CourseContext";
 import UserContext from "../../../context/User/UserContext";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
 
 const SingleCourse = () => {
+  let navigate = useNavigate();
   const ctx = useContext(CourseContext);
   const userCtx = useContext(UserContext);
   const { getCourse, singleCourse, deleteCourse } = ctx;
@@ -22,7 +23,11 @@ const SingleCourse = () => {
 
   const registerCourse = (idCourse) => {
     addCourse(idCourse);
+<<<<<<< Updated upstream
     console.log(currentUser);
+=======
+    navigate("/courses");
+>>>>>>> Stashed changes
   };
 
   console.log(currentUser.mycourses);
