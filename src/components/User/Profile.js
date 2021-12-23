@@ -262,10 +262,6 @@ const Profile = () => {
                       return (
                         <li>
                           <div className="relative pb-8">
-                            <span
-                              className="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200"
-                              aria-hidden="true"
-                            ></span>
                             <div className="relative flex space-x-3">
                               <div>
                                 <span className="h-8 w-8 rounded-full bg-gray-400 flex items-center justify-center ring-8 ring-white">
