@@ -243,7 +243,7 @@ const Profile = () => {
                 </section>
               )}
             </div>
-
+            {/* 
             <section
               aria-labelledby="timeline-title"
               className="lg:col-start-3 lg:col-span-1"
@@ -256,7 +256,6 @@ const Profile = () => {
                   Mis cursos
                 </h2>
 
-                {/* <!-- Activity Feed --> */}
                 <div className="mt-6 flow-root">
                   <ul className="-mb-8">
                     {currentUser.mycourses.map((element, index) => {
@@ -270,7 +269,7 @@ const Profile = () => {
                             <div className="relative flex space-x-3">
                               <div>
                                 <span className="h-8 w-8 rounded-full bg-gray-400 flex items-center justify-center ring-8 ring-white">
-                                  {/* <!-- Heroicon name: solid/user --> */}
+                             
                                   <svg
                                     className="w-5 h-5 text-white"
                                     xmlns="http://www.w3.org/2000/svg"
@@ -334,7 +333,7 @@ const Profile = () => {
                   </Link>
                 )}
               </div>
-            </section>
+            </section> */}
           </div>
         </main>
       </div>

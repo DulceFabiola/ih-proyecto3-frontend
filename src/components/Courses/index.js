@@ -120,11 +120,11 @@ const Courses = () => {
                                       <time dateTime="2020-03-16">
                                         Más detalles
                                       </time>
-                                      <span aria-hidden="true">&middot;</span>
+                                      {/* <span aria-hidden="true">&middot;</span>
                                       <span>
                                         Cursos actuales:{" "}
                                         {teacher.mycourses.length}
-                                      </span>
+                                      </span> */}
                                     </div>
                                   </div>
                                 </div>
