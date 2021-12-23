@@ -243,7 +243,7 @@ const Profile = () => {
                 </section>
               )}
             </div>
-            {/* 
+
             <section
               aria-labelledby="timeline-title"
               className="lg:col-start-3 lg:col-span-1"
@@ -269,7 +269,6 @@ const Profile = () => {
                             <div className="relative flex space-x-3">
                               <div>
                                 <span className="h-8 w-8 rounded-full bg-gray-400 flex items-center justify-center ring-8 ring-white">
-                             
                                   <svg
                                     className="w-5 h-5 text-white"
                                     xmlns="http://www.w3.org/2000/svg"
@@ -333,7 +332,7 @@ const Profile = () => {
                   </Link>
                 )}
               </div>
-            </section> */}
+            </section>
           </div>
         </main>
       </div>
