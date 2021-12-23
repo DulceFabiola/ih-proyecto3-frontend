@@ -29,8 +29,19 @@ const reducer = (globalState, action) => {
 
       return {
         ...globalState,
-        user: null,
-        authStatus: null,
+        currentUser: {
+          name: "",
+          lastname: "",
+          country: "",
+          description: "",
+          email: "",
+          password: "",
+          image: "",
+          experience: "",
+          role: "",
+          mycourses: [],
+        },
+        authStatus: false,
         msg: action.payload,
       };
     case "ADD_COURSE":

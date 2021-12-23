@@ -107,8 +107,9 @@ const Home = () => {
                   </div>
                 </div>
                 <div className="mt-12 sm:mt-16 lg:mt-0">
-                  <div className="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
+                  <div className="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative flex flex-col justify-center   lg:h-full">
                     <img
+                      id="img-home"
                       className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
                       src="https://i.blogs.es/757e54/google-meet/1366_2000.jpg"
                       alt="Inbox user interface"
@@ -148,9 +149,10 @@ const Home = () => {
                   </div>
                 </div>
                 <div className="mt-12 sm:mt-16 lg:mt-0 lg:col-start-1">
-                  <div className="pr-4 -ml-48 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
+                  <div className="pr-4 -ml-48 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative flex flex-col justify-center lg:h-full">
                     <img
-                      className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
+                      id="img-home-2"
+                      className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5  lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
                       src="https://wwwhatsnew.com/wp-content/uploads/2020/12/Funciones-Google-Meet.jpg"
                       alt="Customer profile user interface"
                     />
