@@ -93,17 +93,19 @@ const Profile = () => {
                           {currentUser.email}
                         </dd>
                       </div>
-                      <div className="sm:col-span-1">
-                        <dt className="text-sm font-medium text-gray-500">
-                          {" "}
-                          Experiencia
-                        </dt>
-                        <dd className="mt-1 text-sm text-gray-900">
-                          {currentUser.experience
-                            ? currentUser.experience
-                            : "-"}
-                        </dd>
-                      </div>
+                      {currentUser.role === "Teacher" && (
+                        <div className="sm:col-span-1">
+                          <dt className="text-sm font-medium text-gray-500">
+                            {" "}
+                            Experiencia
+                          </dt>
+                          <dd className="mt-1 text-sm text-gray-900">
+                            {currentUser.experience
+                              ? currentUser.experience
+                              : "-"}
+                          </dd>
+                        </div>
+                      )}
                       <div className="sm:col-span-1">
                         <dt className="text-sm font-medium text-gray-500">
                           Ciudad

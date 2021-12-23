@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import CourseContext from "./../../../context/Course/CourseContext";
 import UserContext from "../../../context/User/UserContext";
 import { Link, useParams } from "react-router-dom";
@@ -16,6 +16,28 @@ const SingleCourse = () => {
   useEffect(() => {
     getCourse(id);
   }, []);
+
+  // 2. ESTADO LOCAL
+  const [userCourses, setUserCourses] = useState({
+    mycourses: [],
+  });
+  // USEEFFECT PARA ACTUALIZAR LOS DATOS DEL ESTADO GLOBAL AL ESTADO LOCAL
+  useEffect(() => {
+    const { mycourses } = currentUser;
+    setUserCourses({
+      mycourses: mycourses,
+    });
+  }, [currentUser]);
+
+  const addCourse = (idCourse) => {
+    setUserCourses({
+      ...userCourses,
+      mycourses: idCourse,
+    });
+    console.log(userCourses);
+  };
+
+  console.log(currentUser.mycourses);
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10">
@@ -115,6 +137,9 @@ const SingleCourse = () => {
               </button>
             </Link>
             <button
+              onClick={() => {
+                addCourse(singleCourse._id);
+              }}
               type="submit"
               class="ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md bg-platzo-400 text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
             >

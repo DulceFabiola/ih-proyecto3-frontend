@@ -211,9 +211,7 @@ const Home = () => {
               <h2 className="text-3xl font-extrabold text-white tracking-tight">
                 Por qué ....
               </h2>
-              <p className="mt-4 max-w-3xl text-lg text-purple-200">
-                Poliworld
-              </p>
+              <p className="mt-4 max-w-3xl text-lg text-purple-200">Fluency</p>
               <div className="mt-12 grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2 lg:mt-16 lg:grid-cols-4 lg:gap-x-8 lg:gap-y-16">
                 <div>
                   <div>

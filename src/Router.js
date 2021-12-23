@@ -18,6 +18,7 @@ import OurTeachers from "./components/Teachers.js/OurTeachers";
 import TeacherDetails from "./components/Teachers.js/TeacherDetails";
 import TeacherState from "./context/Teachers/TeacherState";
 import Plans from "./components/Plans/Plans";
+import PageNotFound from "./components/PageNotFound ";
 const Router = () => {
   return (
     <>
@@ -52,6 +53,9 @@ const Router = () => {
                   <Route path="teachers/:id" element={<TeacherDetails />} />
                   {/* Plans */}
                   <Route path="plans" element={<Plans />} />
+
+                  {/* PageNotFound */}
+                  <Route path="*" element={<PageNotFound />} />
                 </Route>
               </Routes>
             </BrowserRouter>

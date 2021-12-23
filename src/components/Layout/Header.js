@@ -173,15 +173,15 @@ const Header = () => {
                       </Link>
                     </>
                   ) : (
-                    <>
-                      <div class="max-w-lg w-full lg:max-w-xs">
-                        <label for="search" class="sr-only">
+                    <div className="flex-1 flex justify-center px-2 lg:ml-6 lg:justify-end ">
+                      <div className="max-w-lg w-full lg:max-w-xs">
+                        <label for="search" className="sr-only">
                           Search
                         </label>
-                        <div class="relative">
-                          <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <div className="relative">
+                          <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                             <svg
-                              class="h-5 w-5 text-gray-400"
+                              className="h-5 w-5 text-gray-400"
                               xmlns="http://www.w3.org/2000/svg"
                               viewBox="0 0 20 20"
                               fill="currentColor"
@@ -198,13 +198,13 @@ const Header = () => {
                             onChange={(event) => handleChangeSearch(event)}
                             id="search"
                             name="search"
-                            class="block w-full pl-10 pr-3 py-2 border border-transparent rounded-md leading-5 bg-platzo-300 text-gray-300 placeholder-gray-400 focus:outline-none focus:bg-white focus:border-white focus:ring-white focus:text-gray-900 sm:text-sm"
+                            className="block w-full pl-10 pr-3 py-2 border border-transparent rounded-md leading-5 bg-platzo-300 text-gray-300 placeholder-gray-400 focus:outline-none focus:bg-white focus:border-white focus:ring-white focus:text-gray-900 sm:text-sm"
                             placeholder="Search"
                             type="search"
                           />
                         </div>
                       </div>
-                    </>
+                    </div>
                   )}
                   <div className="hidden md:ml-4 md:flex-shrink-0 md:flex md:items-center ">
                     {/* 
@@ -220,15 +220,15 @@ const Header = () => {
                           <span className="sr-only">Abrir menu de usuario</span>
                           {currentUser.image ? (
                             <img
-                              class="h-10 w-10 rounded-full"
+                              className="h-10 w-10 rounded-full"
                               src={currentUser.image}
                               alt=""
                             />
                           ) : (
                             <>
-                              <span class="inline-block h-8 w-8 rounded-full overflow-hidden bg-gray-100">
+                              <span className="inline-block h-8 w-8 rounded-full overflow-hidden bg-gray-100">
                                 <svg
-                                  class="h-full w-full text-gray-300"
+                                  className="h-full w-full text-gray-300"
                                   fill="currentColor"
                                   viewBox="0 0 24 24"
                                 >
@@ -347,9 +347,9 @@ const Header = () => {
                     </div>
                   ) : (
                     <div className="flex-shrink-0">
-                      <span class="inline-block h-10 w-10 rounded-full overflow-hidden bg-gray-100">
+                      <span className="inline-block h-10 w-10 rounded-full overflow-hidden bg-gray-100">
                         <svg
-                          class="h-full w-full text-gray-300"
+                          className="h-full w-full text-gray-300"
                           fill="currentColor"
                           viewBox="0 0 24 24"
                         >
