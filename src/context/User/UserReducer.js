@@ -33,7 +33,12 @@ const reducer = (globalState, action) => {
         authStatus: null,
         msg: action.payload,
       };
-
+    case "ADD_COURSE":
+      console.log(action.payload);
+      return {
+        ...globalState,
+        mycourses: [...globalState.currentUser.mycourses, action.payload],
+      };
     default:
       return globalState;
   }

@@ -1,14 +1,18 @@
-import React, { useEffect, useContext } from "react";
+import React, { useEffect, useContext, useState } from "react";
 import CourseContext from "./../../context/Course/CourseContext";
 import TeacherContext from "../../context/Teachers/TeacherContext";
 import { Link } from "react-router-dom";
+import useQuery from "./useQuery";
 const Courses = () => {
   //ESTADO GLOBAL
   const ctx = useContext(CourseContext);
-  const { courses, getCourses } = ctx;
+  const { courses, getCourses, filterCourses } = ctx;
+  let query = useQuery();
 
   const teacherCtx = useContext(TeacherContext);
   const { teachers, getTeachers } = teacherCtx;
+  const [search] = useState(query.get("search"));
+  const [coursesLocal, setCoursesLocal] = useState([]);
 
   //ESTADO LOCAL
   useEffect(() => {
@@ -16,6 +20,22 @@ const Courses = () => {
     getTeachers();
   }, []);
 
+  useEffect(() => {
+    setCoursesLocal(courses);
+    if (search && search.length) {
+      const newSearch = courses.filter(
+        (element) =>
+          eliminarAcentos(element.language.toLowerCase().trim()) ===
+          search.toLowerCase().trim()
+      );
+      console.log(newSearch);
+      setCoursesLocal([...newSearch]);
+    }
+  }, [search, courses]);
+
+  const eliminarAcentos = (texto) => {
+    return texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+  };
   return (
     <>
       <div class="relative bg-gray-50 pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">
@@ -33,7 +53,7 @@ const Courses = () => {
             </p>
           </div>
           <div class="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
-            {courses.map((element) => {
+            {coursesLocal.map((element) => {
               return (
                 <>
                   <Link to={`/courses/${element._id}`} key={element._id}>
@@ -81,7 +101,10 @@ const Courses = () => {
                         {teachers.map((teacher) => {
                           if (teacher._id === element.owner) {
                             return (
-                              <Link to={`/teachers/${teacher._id}`}>
+                              <Link
+                                key={teacher._id}
+                                to={`/teachers/${teacher._id}`}
+                              >
                                 <div class="mt-6 flex items-center">
                                   <div class="flex-shrink-0">
                                     <span class="sr-only">{teacher.name}</span>
@@ -96,7 +119,7 @@ const Courses = () => {
                                       Teacher: {teacher.name}
                                     </p>
                                     <div class="flex space-x-1 text-sm text-gray-500">
-                                      <time datetime="2020-03-16">
+                                      <time dateTime="2020-03-16">
                                         Más detalles
                                       </time>
                                       <span aria-hidden="true">&middot;</span>

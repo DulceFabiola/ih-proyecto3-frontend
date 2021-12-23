@@ -92,7 +92,16 @@ const UserState = (props) => {
 
   //EDITAR PERFIL
   const updateProfile = async (form, idUser) => {
-    const res = await axiosClient.put(`users/editprofile/${idUser}`, form);
+    await axiosClient.put(`users/editprofile/${idUser}`, form);
+  };
+
+  const addCourse = async (courseId) => {
+    try {
+      await axiosClient.post(`users/registercourse/${courseId}`);
+      await verifyingToken();
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   // 4. RETORNO
@@ -107,6 +116,7 @@ const UserState = (props) => {
         verifyingToken,
         logoutUser,
         updateProfile,
+        addCourse,
       }}
     >
       {props.children}

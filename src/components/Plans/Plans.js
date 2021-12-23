@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Plans = () => {
   return (
@@ -40,9 +41,9 @@ const Plans = () => {
                     aria-hidden="true"
                   >
                     <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
                       d="M5 13l4 4L19 7"
                     />
                   </svg>
@@ -61,9 +62,9 @@ const Plans = () => {
                     aria-hidden="true"
                   >
                     <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
                       d="M5 13l4 4L19 7"
                     />
                   </svg>
@@ -82,9 +83,9 @@ const Plans = () => {
                     aria-hidden="true"
                   >
                     <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
                       d="M5 13l4 4L19 7"
                     />
                   </svg>
@@ -101,9 +102,9 @@ const Plans = () => {
                     aria-hidden="true"
                   >
                     <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
                       d="M5 13l4 4L19 7"
                     />
                   </svg>
@@ -114,12 +115,12 @@ const Plans = () => {
               </ul>
             </div>
 
-            <a
-              href="/"
+            <Link
+              to="/"
               className="bg-indigo-50 text-platzo-200 hover:bg-indigo-100 mt-8 block w-full py-3 px-6 border border-transparent rounded-md text-center font-medium"
             >
               Agregar plan
-            </a>
+            </Link>
           </div>
 
           <div className="relative p-8 bg-white border border-gray-200 rounded-2xl shadow-sm flex flex-col">
@@ -150,9 +151,9 @@ const Plans = () => {
                     aria-hidden="true"
                   >
                     <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
                       d="M5 13l4 4L19 7"
                     />
                   </svg>
@@ -171,9 +172,9 @@ const Plans = () => {
                     aria-hidden="true"
                   >
                     <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
                       d="M5 13l4 4L19 7"
                     />
                   </svg>
@@ -192,9 +193,9 @@ const Plans = () => {
                     aria-hidden="true"
                   >
                     <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
                       d="M5 13l4 4L19 7"
                     />
                   </svg>
@@ -213,9 +214,9 @@ const Plans = () => {
                     aria-hidden="true"
                   >
                     <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
                       d="M5 13l4 4L19 7"
                     />
                   </svg>
@@ -226,12 +227,12 @@ const Plans = () => {
               </ul>
             </div>
 
-            <a
-              href="#"
+            <Link
+              to="#"
               className="bg-platzo-400 text-white  mt-8 block w-full py-3 px-6 border border-transparent rounded-md text-center font-medium"
             >
               Agregar plan
-            </a>
+            </Link>
           </div>
 
           <div className="relative p-8 bg-white border border-gray-200 rounded-2xl shadow-sm flex flex-col">
@@ -258,9 +259,9 @@ const Plans = () => {
                     aria-hidden="true"
                   >
                     <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
                       d="M5 13l4 4L19 7"
                     />
                   </svg>
@@ -279,9 +280,9 @@ const Plans = () => {
                     aria-hidden="true"
                   >
                     <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
                       d="M5 13l4 4L19 7"
                     />
                   </svg>
@@ -300,9 +301,9 @@ const Plans = () => {
                     aria-hidden="true"
                   >
                     <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
                       d="M5 13l4 4L19 7"
                     />
                   </svg>
@@ -321,9 +322,9 @@ const Plans = () => {
                     aria-hidden="true"
                   >
                     <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
                       d="M5 13l4 4L19 7"
                     />
                   </svg>
@@ -342,9 +343,9 @@ const Plans = () => {
                     aria-hidden="true"
                   >
                     <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
                       d="M5 13l4 4L19 7"
                     />
                   </svg>
@@ -363,9 +364,9 @@ const Plans = () => {
                     aria-hidden="true"
                   >
                     <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
                       d="M5 13l4 4L19 7"
                     />
                   </svg>
@@ -376,12 +377,12 @@ const Plans = () => {
               </ul>
             </div>
 
-            <a
-              href="#"
+            <Link
+              to="#"
               className="bg-indigo-50 text-platzo-200 hover:bg-indigo-100 mt-8 block w-full py-3 px-6 border border-transparent rounded-md text-center font-medium"
             >
               Agregar plan
-            </a>
+            </Link>
           </div>
         </div>
       </div>

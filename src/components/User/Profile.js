@@ -164,9 +164,9 @@ const Profile = () => {
                               aria-hidden="true"
                             >
                               <path
-                                fill-rule="evenodd"
+                                fillRule="evenodd"
                                 d="M5.293 9.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 7.414V15a1 1 0 11-2 0V7.414L6.707 9.707a1 1 0 01-1.414 0z"
-                                clip-rule="evenodd"
+                                clipRule="evenodd"
                               />
                             </svg>
                             <span className="sr-only">Increased by</span>
@@ -196,9 +196,9 @@ const Profile = () => {
                               aria-hidden="true"
                             >
                               <path
-                                fill-rule="evenodd"
+                                fillRule="evenodd"
                                 d="M5.293 9.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 7.414V15a1 1 0 11-2 0V7.414L6.707 9.707a1 1 0 01-1.414 0z"
-                                clip-rule="evenodd"
+                                clipRule="evenodd"
                               />
                             </svg>
                             <span className="sr-only">Increased by</span>
@@ -228,9 +228,9 @@ const Profile = () => {
                               aria-hidden="true"
                             >
                               <path
-                                fill-rule="evenodd"
+                                fillRule="evenodd"
                                 d="M5.293 9.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 7.414V15a1 1 0 11-2 0V7.414L6.707 9.707a1 1 0 01-1.414 0z"
-                                clip-rule="evenodd"
+                                clipRule="evenodd"
                               />
                             </svg>
                             <span className="sr-only">Increased by</span>
@@ -279,9 +279,9 @@ const Profile = () => {
                                     aria-hidden="true"
                                   >
                                     <path
-                                      fill-rule="evenodd"
+                                      fillRule="evenodd"
                                       d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
-                                      clip-rule="evenodd"
+                                      clipRule="evenodd"
                                     />
                                   </svg>
                                 </span>

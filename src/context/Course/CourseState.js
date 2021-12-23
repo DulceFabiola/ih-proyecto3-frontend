@@ -30,6 +30,7 @@ const CourseState = (props) => {
       image: "",
       owner: "",
     },
+    filterCourses: "",
   };
   //2.CONFIGURACION DE REDUCER Y CREACION DE ESTADO GLOBAL
   //para cambios en el estado inicial
@@ -83,6 +84,7 @@ const CourseState = (props) => {
       value={{
         courses: globalState.courses,
         singleCourse: globalState.singleCourse,
+        filterCourses: globalState.filterCourses,
         getCourses,
         getCourse,
         createCourse,

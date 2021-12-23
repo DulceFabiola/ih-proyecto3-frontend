@@ -7,7 +7,7 @@ const SingleCourse = () => {
   const ctx = useContext(CourseContext);
   const userCtx = useContext(UserContext);
   const { getCourse, singleCourse, deleteCourse } = ctx;
-  const { currentUser } = userCtx;
+  const { currentUser, addCourse } = userCtx;
 
   //obtener el id de la url
   const params = useParams();
@@ -18,23 +18,11 @@ const SingleCourse = () => {
   }, []);
 
   // 2. ESTADO LOCAL
-  const [userCourses, setUserCourses] = useState({
-    mycourses: [],
-  });
   // USEEFFECT PARA ACTUALIZAR LOS DATOS DEL ESTADO GLOBAL AL ESTADO LOCAL
-  useEffect(() => {
-    const { mycourses } = currentUser;
-    setUserCourses({
-      mycourses: mycourses,
-    });
-  }, [currentUser]);
 
-  const addCourse = (idCourse) => {
-    setUserCourses({
-      ...userCourses,
-      mycourses: idCourse,
-    });
-    console.log(userCourses);
+  const registerCourse = (idCourse) => {
+    addCourse(idCourse);
+    console.log(currentUser);
   };
 
   console.log(currentUser.mycourses);
@@ -138,7 +126,7 @@ const SingleCourse = () => {
             </Link>
             <button
               onClick={() => {
-                addCourse(singleCourse._id);
+                registerCourse(singleCourse._id);
               }}
               type="submit"
               class="ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md bg-platzo-400 text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
