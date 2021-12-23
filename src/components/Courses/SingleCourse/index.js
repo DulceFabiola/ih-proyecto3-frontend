@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect } from "react";
 import CourseContext from "./../../../context/Course/CourseContext";
 import UserContext from "../../../context/User/UserContext";
 import { Link, useParams, useNavigate } from "react-router-dom";
@@ -23,15 +23,8 @@ const SingleCourse = () => {
 
   const registerCourse = (idCourse) => {
     addCourse(idCourse);
-<<<<<<< Updated upstream
-    console.log(currentUser);
-=======
     navigate("/courses");
->>>>>>> Stashed changes
   };
-
-  console.log(currentUser.mycourses);
-
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10">
       {/* <!-- This example requires Tailwind CSS v2.0+ --> */}

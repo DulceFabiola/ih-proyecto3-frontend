@@ -1,11 +1,9 @@
 import React, { useState, useContext } from "react";
 import UserContext from "./../../context/User/UserContext";
-import { Link } from "react-router-dom";
 
 const Register = () => {
   const ctx = useContext(UserContext);
   const { registerUser, msg } = ctx;
-  console.log(ctx);
   //ESTADO LOCAL cuando trabajamos con el formulario lo guardamos local
   const [newUser, setNewUser] = useState({
     name: "",

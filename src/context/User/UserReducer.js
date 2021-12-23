@@ -45,7 +45,6 @@ const reducer = (globalState, action) => {
         msg: action.payload,
       };
     case "ADD_COURSE":
-      console.log(action.payload);
       return {
         ...globalState,
         mycourses: [...globalState.currentUser.mycourses, action.payload],
