@@ -72,6 +72,7 @@ const Home = () => {
                       </p>
                       <div className="mt-6">
                         <a
+                          target="blank"
                           href="https://meetings.hubspot.com/dulce-fabiola"
                           className="inline-flex bg-platzo-1000 bg-origin-border px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:from-purple-700 hover:to-indigo-700"
                         >
