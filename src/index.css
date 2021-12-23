@@ -22,3 +22,10 @@ code {
   flex: 1;
   justify-content: space-between;
 }
+
+#img-home,
+#img-home-2 {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
