@@ -10,7 +10,6 @@ const Login = () => {
     email: "",
     password: "",
   });
-  console.log(msg);
   const handleChange = (e) => {
     e.preventDefault();
 

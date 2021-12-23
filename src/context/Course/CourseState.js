@@ -64,18 +64,17 @@ const CourseState = (props) => {
 
   //CREAR CURSO
   const createCourse = async (form) => {
-    const res = await axiosClient.post("courses/create", form);
-    console.log(res);
+    await axiosClient.post("courses/create", form);
   };
 
   //EDITAR CURSO
   const updateCourse = async (form, idCourse) => {
-    const res = await axiosClient.put(`courses/edit/${idCourse}`, form);
+    await axiosClient.put(`courses/edit/${idCourse}`, form);
   };
 
   //ELIMINAR CURSO
   const deleteCourse = async (idCourse) => {
-    const res = await axiosClient.delete(`courses/delete/${idCourse}`);
+    await axiosClient.delete(`courses/delete/${idCourse}`);
   };
 
   //4.RETORNO

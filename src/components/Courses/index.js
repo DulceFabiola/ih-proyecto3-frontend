@@ -6,7 +6,7 @@ import useQuery from "./useQuery";
 const Courses = () => {
   //ESTADO GLOBAL
   const ctx = useContext(CourseContext);
-  const { courses, getCourses, filterCourses } = ctx;
+  const { courses, getCourses } = ctx;
   let query = useQuery();
 
   const teacherCtx = useContext(TeacherContext);
@@ -28,7 +28,6 @@ const Courses = () => {
           eliminarAcentos(element.language.toLowerCase().trim()) ===
           search.toLowerCase().trim()
       );
-      console.log(newSearch);
       setCoursesLocal([...newSearch]);
     }
   }, [search, courses]);
