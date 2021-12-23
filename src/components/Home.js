@@ -71,12 +71,12 @@ const Home = () => {
                         Conoce tu nivel de inglés, reserva una asesoría.
                       </p>
                       <div className="mt-6">
-                        <Link
-                          to="#"
+                        <a
+                          href="https://meetings.hubspot.com/dulce-fabiola"
                           className="inline-flex bg-platzo-1000 bg-origin-border px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:from-purple-700 hover:to-indigo-700"
                         >
                           Resérvala hoy
-                        </Link>
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -139,7 +139,7 @@ const Home = () => {
                       </p>
                       <div className="mt-6">
                         <Link
-                          to="#"
+                          to="/plans"
                           className="inline-flex bg-platzo-1000 bg-origin-border px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:from-purple-700 hover:to-indigo-700"
                         >
                           Planes
@@ -445,7 +445,7 @@ const Home = () => {
                   Regístrate
                 </Link>
                 <Link
-                  to="#"
+                  to="/plans"
                   className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-platzo-400 bg-indigo-50 hover:bg-indigo-100"
                 >
                   Conoce mas sobre nuestros planes
