@@ -123,7 +123,7 @@ const Courses = () => {
                                       <span aria-hidden="true">&middot;</span>
                                       <span>
                                         Cursos actuales:{" "}
-                                        {teacher.mycourses.length + 1}
+                                        {teacher.mycourses.length}
                                       </span>
                                     </div>
                                   </div>
