@@ -211,9 +211,11 @@ const Home = () => {
           <div className="bg-gradient-to-r from-platzo-600 to-platzo-1000">
             <div className="max-w-4xl mx-auto px-4 py-16 sm:px-6 sm:pt-20 sm:pb-24 lg:max-w-7xl lg:pt-24 lg:px-8">
               <h2 className="text-3xl font-extrabold text-white tracking-tight">
-                Por qué ....
+                ¿Por qué Fluency?
               </h2>
-              <p className="mt-4 max-w-3xl text-lg text-purple-200">Fluency</p>
+              <p className="mt-4 max-w-3xl text-lg text-purple-200">
+                Campus learning
+              </p>
               <div className="mt-12 grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2 lg:mt-16 lg:grid-cols-4 lg:gap-x-8 lg:gap-y-16">
                 <div>
                   <div>
@@ -407,7 +409,7 @@ const Home = () => {
                     <span className="mt-1 block text-base text-gray-300">
                       <span className="font-medium text-white">
                         Plataforma disponible 24/7
-                      </span>
+                      </span>{" "}
                       para que puedas estudiar a tu ritmo.
                     </span>
                   </p>
@@ -419,8 +421,8 @@ const Home = () => {
                     <span className="mt-1 block text-base text-gray-300">
                       <span className="font-medium text-white">
                         Ingresa tu curso
-                      </span>
-                      y empieza con tus clases ,
+                      </span>{" "}
+                      y empieza con tus clases.
                     </span>
                   </p>
                 </div>

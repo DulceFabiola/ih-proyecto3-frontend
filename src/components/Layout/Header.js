@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import UserContext from "../../context/User/UserContext";
-import CourseContext from "./../../context/Course/CourseContext";
 
 const Header = () => {
   const ctx = useContext(UserContext);
@@ -9,9 +8,6 @@ const Header = () => {
   const navigate = useNavigate();
 
   const { currentUser, verifyingToken, logoutUser } = ctx;
-
-  const coursesCtx = useContext(CourseContext);
-  const { filterCourses } = coursesCtx;
 
   useEffect(() => {
     verifyingToken();
@@ -51,9 +47,7 @@ const Header = () => {
                   <span className="sr-only">Open main menu</span>
                   {/* <!--
               Icon when menu is closed.
-
               Heroicon name: outline/menu
-
               Menu open: "hidden", Menu closed: "block"
             --> */}
                   <svg
@@ -71,13 +65,6 @@ const Header = () => {
                       d="M4 6h16M4 12h16M4 18h16"
                     />
                   </svg>
-                  {/* <!--
-              Icon when menu is open.
-
-              Heroicon name: outline/x
-
-              Menu open: "block", Menu closed: "hidden"
-            --> */}
                   <svg
                     className="hidden h-6 w-6"
                     xmlns="http://www.w3.org/2000/svg"
@@ -111,7 +98,6 @@ const Header = () => {
               </div>
               {currentUser.name ? (
                 <div className="hidden md:ml-6 md:flex md:items-center md:space-x-4">
-                  {/* <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" --> */}
                   <Link
                     to="/courses"
                     className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
@@ -155,7 +141,42 @@ const Header = () => {
             {currentUser.name ? (
               <>
                 <div className="flex items-center">
-                  {currentUser.role === "Teacher" ? (
+                  <div className="flex-1 flex justify-center px-2 lg:ml-6 lg:justify-end ">
+                    <div className="max-w-lg w-full lg:max-w-xs">
+                      <label for="search" className="sr-only">
+                        Search
+                      </label>
+                      <div className="relative">
+                        <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                          <svg
+                            className="h-5 w-5 text-gray-400"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                            aria-hidden="true"
+                          >
+                            <path
+                              fillRule="evenodd"
+                              d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                              clipRule="evenodd"
+                            />
+                          </svg>
+                        </div>
+                        <form onSubmit={() => searchBar()}>
+                          <input
+                            onChange={(event) => handleChangeSearch(event)}
+                            id="search"
+                            name="search"
+                            value={searchValue}
+                            className="block w-full pl-10 pr-3 py-2 border border-transparent rounded-md leading-5 bg-platzo-300 text-gray-300 placeholder-gray-400 focus:outline-none focus:bg-white focus:border-white focus:ring-white focus:text-gray-900 sm:text-sm"
+                            placeholder="Search"
+                            type="search"
+                          />
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                  {currentUser.role === "Teacher" && (
                     <>
                       <Link to="/courses/create">
                         <div className="flex-shrink-0">
@@ -182,42 +203,6 @@ const Header = () => {
                         </div>
                       </Link>
                     </>
-                  ) : (
-                    <div className="flex-1 flex justify-center px-2 lg:ml-6 lg:justify-end ">
-                      <div className="max-w-lg w-full lg:max-w-xs">
-                        <label for="search" className="sr-only">
-                          Search
-                        </label>
-                        <div className="relative">
-                          <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                            <svg
-                              className="h-5 w-5 text-gray-400"
-                              xmlns="http://www.w3.org/2000/svg"
-                              viewBox="0 0 20 20"
-                              fill="currentColor"
-                              aria-hidden="true"
-                            >
-                              <path
-                                fillRule="evenodd"
-                                d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
-                                clipRule="evenodd"
-                              />
-                            </svg>
-                          </div>
-                          <form onSubmit={() => searchBar()}>
-                            <input
-                              onChange={(event) => handleChangeSearch(event)}
-                              id="search"
-                              name="search"
-                              value={searchValue}
-                              className="block w-full pl-10 pr-3 py-2 border border-transparent rounded-md leading-5 bg-platzo-300 text-gray-300 placeholder-gray-400 focus:outline-none focus:bg-white focus:border-white focus:ring-white focus:text-gray-900 sm:text-sm"
-                              placeholder="Search"
-                              type="search"
-                            />
-                          </form>
-                        </div>
-                      </div>
-                    </div>
                   )}
                   <div className="hidden md:ml-4 md:flex-shrink-0 md:flex md:items-center ">
                     {/* 
